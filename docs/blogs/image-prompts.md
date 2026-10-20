@@ -17,6 +17,13 @@ Notes worth knowing before you re-run these:
 
 Consistent visual direction for all three images: modern technical illustration for a .NET developer audience, dark-friendly palette, clean geometric shapes, subtle cyan/purple highlights, no real brand logos, no copyrighted characters, no long rendered text. If text must appear, keep it to short generic labels only.
 
+## `26-10-21-srt-support.md` images
+
+Generated 2026-10-20 with `t2i "<prompt>" --provider foundry-gpt-image-2`, then renamed. Both are unmodified 1024x1024 originals. Shared style: modern dark-friendly technical illustration, dark navy background, subtle grid, cyan and violet accents, no real logos.
+
+- `26-10-21-srt-hero.png`: a subtitle file with timeline timestamp blocks, messy text bubbles flowing through a compact local AI module and coming out as clean text, with timestamps aligned and untouched.
+- `26-10-21-srt-flow.png`: four icons in a row (subtitle file, parser into cue cards, AI chip cleaning each card's text, writer reassembling the file), with clock icons passing straight through unchanged below.
+
 ## `hero.png`
 
 **Purpose:** Introduce the idea of local transcript cleanup: rough speech-to-text enters a local .NET/ONNX processing box and comes out as clean written text.

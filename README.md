@@ -172,6 +172,19 @@ var cleaned = await normalizer.NormalizeChunkedAsync(longTranscript, maxCharsPer
 
 Each chunk is normalized statelessly at sentence boundaries; for tighter control on transcripts with context spanning boundaries, chunk manually at a natural pause instead.
 
+## SRT and WebVTT subtitles
+
+The model only sees text. `NormalizeSubtitlesAsync` parses the cues, cleans each cue's text, and writes the file back with the **original timestamps untouched**.
+
+```csharp
+using var normalizer = await TranscriptNormalizer.CreateAsync();
+var srt = await File.ReadAllTextAsync("episode.srt");
+var cleaned = await normalizer.NormalizeSubtitlesAsync(srt); // format auto-detected
+await File.WriteAllTextAsync("episode.clean.srt", cleaned);
+```
+
+Notes: each cue is normalized independently (no cross-cue context), markup tags are stripped, multi-line cues become one line, and cues that are pure filler are kept empty unless you pass `dropEmptyCues: true` (SRT is renumbered).
+
 ## FP16 is currently broken on CPU
 
 `elbruno/s1-mini-onnx` also has an `fp16/` subfolder, but that variant fails at inference on CPU with `onnxruntime-genai` 0.15.1 (upstream ORT GQA `repeat_kv` Reshape shape-mismatch bug). **Use INT4 (the default).** This library will not switch to FP16 automatically.
@@ -193,11 +206,11 @@ dotnet test ElBruno.S1Mini.slnx --framework net8.0
 
 ## What's New
 
+- 🎞️ **`v0.2.0` SRT and WebVTT support** — `NormalizeSubtitlesAsync` cleans every cue's text and keeps the original timestamps untouched.
 - 📚 **`v0.1.2`** — documentation release: the package page now shows before/after examples, corrects the upstream accuracy attribution, and refreshes the author links. No library code changes.
 - 🦺 **ORT-GenAI temperature-0 crash guard** — the native `temperature=0` divide-by-zero trap is guarded at the runtime layer; greedy decoding is safe for every call.
 - 🎙️ **`LiveMicTranscription` sample** — microphone → Silero VAD → Whisper → s1-mini, fully on-device, with `--save-audio` / `--wav` replay for reproducible testing.
 - 🧵 **`S1MiniClient`** — self-contained `IChatClient` implementation with automatic HuggingFace download of `elbruno/s1-mini-onnx` (int4).
-- 🧪 **Qwen3 non-thinking prompt format** — ported verbatim from the model's own `chat_template.jinja`, verified byte-for-byte against the real model.
 
 ## Documentation
 

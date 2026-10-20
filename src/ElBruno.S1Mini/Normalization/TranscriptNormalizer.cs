@@ -163,6 +163,50 @@ public sealed class TranscriptNormalizer : IDisposable
     }
 
     /// <summary>
+    /// Normalizes the text of every cue in an SRT or WebVTT file while leaving all
+    /// timestamps untouched. Each cue is normalized independently (the model is
+    /// stateless), markup tags are stripped, and multi-line cues are joined into one line.
+    /// </summary>
+    /// <param name="content">The subtitle file content.</param>
+    /// <param name="format">The format; auto-detected from the content when <see langword="null"/>.</param>
+    /// <param name="options">Normalization options.</param>
+    /// <param name="dropEmptyCues">Remove cues whose text normalizes to empty (pure filler). Defaults to keeping them with empty text.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The normalized subtitle file content in the same format.</returns>
+    public async Task<string> NormalizeSubtitlesAsync(
+        string content,
+        SubtitleFormat? format = null,
+        TranscriptNormalizerOptions? options = null,
+        bool dropEmptyCues = false,
+        CancellationToken cancellationToken = default)
+    {
+        ObjectDisposedException.ThrowIf(_disposed, this);
+        ArgumentNullException.ThrowIfNull(content);
+
+        var fmt = format ?? SubtitleParser.DetectFormat(content);
+        var cues = SubtitleParser.Parse(content, fmt);
+        var result = new List<SubtitleCue>(cues.Count);
+
+        foreach (var cue in cues)
+        {
+            var plain = System.Text.RegularExpressions.Regex.Replace(cue.Text, "<[^>]+>", string.Empty);
+            plain = System.Text.RegularExpressions.Regex.Replace(plain, @"\s+", " ").Trim();
+
+            var cleaned = await NormalizeAsync(plain, options, cancellationToken).ConfigureAwait(false);
+            cleaned = System.Text.RegularExpressions.Regex.Replace(cleaned, @"\s+", " ").Trim();
+
+            if (cleaned.Length == 0 && dropEmptyCues)
+            {
+                continue;
+            }
+
+            result.Add(cue with { Text = cleaned });
+        }
+
+        return SubtitleParser.Write(result, fmt);
+    }
+
+    /// <summary>
     /// Splits a long transcript into chunks at sentence boundaries, keeping each
     /// chunk at or under <paramref name="maxCharsPerChunk"/> characters when possible.
     /// Internal so it can be unit-tested without a model.
