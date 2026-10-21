@@ -8,7 +8,7 @@
     <PackageIcon Condition="Exists('$(MSBuildThisFileDirectory)../../images/nuget_logo.png')">nuget_logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>s1-mini;asr;speech-to-text;transcript;normalizer;onnx;huggingface;local;ai;qwen3</PackageTags>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>

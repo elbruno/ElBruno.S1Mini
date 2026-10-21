@@ -10,6 +10,34 @@ public class SubtitleNormalizationTests
         "2\r\n00:00:04,000 --> 00:00:05,000\r\num uh\r\n\r\n" +
         "3\r\n00:00:06,000 --> 00:00:08,000\r\nwelcome back\r\n";
 
+    [Theory]
+    [InlineData(SubtitleFormat.Srt, "00:00:01,234 --> 00:00:05,678")]
+    [InlineData(SubtitleFormat.WebVtt, "00:00:01.234 --> 00:00:05.678")]
+    public void FromTimes_FormatsWhisperTimes(SubtitleFormat format, string expectedTiming)
+    {
+        var cue = SubtitleCue.FromTimes(
+            TimeSpan.FromMilliseconds(1234),
+            TimeSpan.FromMilliseconds(5678),
+            "Hello.",
+            format);
+
+        Assert.Equal(expectedTiming, cue.Timing);
+        Assert.Null(cue.Identifier);
+        Assert.Equal("Hello.", cue.Text);
+    }
+
+    [Fact]
+    public void FromTimes_Srt_DoesNotWrapAtTwentyFourHours()
+    {
+        var cue = SubtitleCue.FromTimes(
+            TimeSpan.FromHours(27),
+            TimeSpan.FromHours(27).Add(TimeSpan.FromSeconds(1)),
+            "Long recording.",
+            SubtitleFormat.Srt);
+
+        Assert.Equal("27:00:00,000 --> 27:00:01,000", cue.Timing);
+    }
+
     [Fact]
     public void DetectFormat_Works()
     {

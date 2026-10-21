@@ -8,6 +8,7 @@
   <Folder Name="/src/samples/">
     <Project Path="src\samples\HelloS1Mini\HelloS1Mini.csproj" />
     <Project Path="src\samples\LiveMicTranscription\LiveMicTranscription.csproj" />
+    <Project Path="src\samples\PodcastToSrt\PodcastToSrt.csproj" />
     <Project Path="src\samples\S1MiniWebSample\S1MiniWebSample.csproj" />
   </Folder>
 </Solution>

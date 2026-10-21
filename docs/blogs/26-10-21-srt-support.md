@@ -1,154 +1,164 @@
 ---
-title: "Cleaning SRT and WebVTT subtitles in .NET with s1-mini"
-description: "ElBruno.S1Mini 0.2.0 adds NormalizeSubtitlesAsync: clean podcast SRT and WebVTT files locally in .NET while keeping every timestamp untouched."
+title: "From podcast audio to clean subtitles in .NET: Whisper + s1-mini"
+description: "A complete local pipeline in C#: transcribe a podcast recording with Whisper (with timestamps), clean each segment with s1-mini, and write a ready-to-use SRT or WebVTT file."
 date: 2026-10-21
-tags: [dotnet, ai, onnx, srt, webvtt, subtitles, transcripts]
+tags: [dotnet, ai, onnx, whisper, srt, webvtt, subtitles, podcast]
 author: "Bruno Capuano"
 ---
 
 ![Hero illustration: messy subtitle cues go through a local AI cleaner and come out clean with timings preserved](images/26-10-21-srt-hero.png)
 
-# Cleaning SRT and WebVTT subtitles in .NET with s1-mini
+# From podcast audio to clean subtitles in .NET: Whisper + s1-mini
 
-After I published [the first post about s1-mini](26-08-20-intro.md), a reader (hi, Isaac!) sent me a message: he generates SRT files for his podcast and wanted to pass them straight into the library. His second message was the real problem: the model does not handle timestamps.
+After [my first post about s1-mini](26-08-20-intro.md), a reader (hi, Isaac!) asked if the library could take the SRT files he generates for his podcast. Then he noticed the catch: the model only rewrites text, it has no idea what a timestamp is.
 
-He is right. [`superwhisper/s1-mini`](https://huggingface.co/superwhisper/s1-mini) only knows how to rewrite text. But that does not block the feature. The model never needs to see a timestamp. The library can parse the file, clean only the text, and put the timestamps back exactly as they were.
+That is fine, because the model does not need to know. The real goal is bigger than cleaning an existing SRT: **start with an audio recording and end with a subtitle file**. That takes two local models, each doing the one thing it is good at:
 
-That is what `ElBruno.S1Mini` **0.2.0** does.
+| Step | Tool | Job |
+|---|---|---|
+| 1 | [`ElBruno.Whisper`](https://www.nuget.org/packages/ElBruno.Whisper) | Speech to text, **with segment timestamps** |
+| 2 | `ElBruno.S1Mini` | Clean each segment's text (fillers, stutters, punctuation, numbers) |
+| 3 | `ElBruno.S1Mini` | Write the segments back as SRT or WebVTT, timestamps untouched |
 
-## The one-liner
+Everything runs on your machine. Nothing is uploaded.
+
+![Flow: audio, Whisper segments, s1-mini cleanup, subtitle file, with timestamps passing through unchanged](images/26-10-21-srt-flow.png)
+
+> **Why not just give audio to s1-mini?** s1-mini never hears audio and never sees timestamps. Whisper owns the timing. s1-mini only ever receives short pieces of text. The library keeps the two together.
+
+## Setup
 
 ```bash
-dotnet add package ElBruno.S1Mini --version 0.2.0
+dotnet new console -n PodcastToSrt
+cd PodcastToSrt
+dotnet add package ElBruno.S1Mini --version 0.2.1
+dotnet add package ElBruno.Whisper --version 0.9.0
 ```
+
+The first run downloads the Whisper model and the s1-mini ONNX model, then caches both.
+
+## Step 1: transcribe the audio with timestamps
+
+Timestamps are opt-in in `ElBruno.Whisper`. If you forget `EnableTimestamps`, `Segments` comes back null:
+
+```csharp
+using ElBruno.Whisper;
+
+using var whisper = await WhisperClient.CreateAsync(new WhisperOptions
+{
+    // Whisper Tiny (English) keeps spoken fillers like "um" and "uh",
+    // which is exactly what s1-mini is designed to clean up.
+    Model = KnownWhisperModels.All[0],
+    EnableTimestamps = true,
+});
+
+var transcription = await whisper.TranscribeAsync("episode.wav");
+```
+
+`transcription.Segments` is a list of `TranscriptionSegment` with `Start`, `End` (both `TimeSpan`) and `Text`.
+
+## Step 2: turn the segments into subtitle cues
+
+`SubtitleCue.FromTimes` formats the timing line for you (`00:00:01,000` for SRT, `00:00:01.000` for WebVTT):
 
 ```csharp
 using ElBruno.S1Mini.Normalization;
 
+var format = SubtitleFormat.Srt;
+
+var rawCues = transcription.Segments!
+    .Select(s => SubtitleCue.FromTimes(s.Start, s.End, s.Text.Trim(), format))
+    .ToList();
+
+var rawSrt = SubtitleParser.Write(rawCues, format);
+```
+
+At this point you already have a valid, timestamped, but still messy subtitle file.
+
+## Step 3: clean the text, keep the timing
+
+```csharp
 using var normalizer = await TranscriptNormalizer.CreateAsync();
 
-var srt = await File.ReadAllTextAsync("episode.srt");
-var cleaned = await normalizer.NormalizeSubtitlesAsync(srt);
+var cleaned = await normalizer.NormalizeSubtitlesAsync(rawSrt, format);
 
-await File.WriteAllTextAsync("episode.clean.srt", cleaned);
+await File.WriteAllTextAsync("episode.srt", cleaned);
 ```
 
-The format is auto-detected: content starting with `WEBVTT` is WebVTT, everything else is SRT. You can also pass it explicitly.
+`NormalizeSubtitlesAsync` parses the cues, normalizes each cue's text, and writes the file back. Timing lines are carried through as raw strings, so they cannot drift. Markup tags such as `<i>` are stripped, multi-line cues are joined into one line, and cues that are pure filler stay in place with empty text (or are removed if you pass `dropEmptyCues: true`, in which case SRT is renumbered).
 
-## What goes in, what comes out
+## The whole thing in one file
 
-Input:
-
-```text
-1
-00:00:01,000 --> 00:00:03,500
-um so <i>hello</i>
-there everyone
-
-2
-00:00:04,000 --> 00:00:05,000
-um uh
-
-3
-00:00:06,000 --> 00:00:08,000
-welcome back to the the show
-```
-
-Output (illustrative, the exact wording comes from the model):
-
-```text
-1
-00:00:01,000 --> 00:00:03,500
-So hello there everyone.
-
-2
-00:00:04,000 --> 00:00:05,000
-
-
-3
-00:00:06,000 --> 00:00:08,000
-Welcome back to the show.
-```
-
-Cue 2 was pure filler, so the model returns an empty string and the cue stays in place with empty text. That keeps the file aligned with the audio. If you would rather remove it:
+This is the [`PodcastToSrt`](https://github.com/elbruno/ElBruno.S1Mini/tree/main/src/samples/PodcastToSrt) sample, trimmed:
 
 ```csharp
-var cleaned = await normalizer.NormalizeSubtitlesAsync(
-    srt,
-    dropEmptyCues: true);
-```
+using ElBruno.S1Mini.Normalization;
+using ElBruno.Whisper;
 
-With `dropEmptyCues`, SRT cues are renumbered so the indexes stay sequential.
+var input = args[0];
+var format = args.Contains("--vtt") ? SubtitleFormat.WebVtt : SubtitleFormat.Srt;
+var output = Path.ChangeExtension(input, format == SubtitleFormat.Srt ? ".srt" : ".vtt");
 
-## How it works
-
-![Flow: subtitle file, parser, AI cleaner, writer, with timestamps passing through unchanged](images/26-10-21-srt-flow.png)
-
-The implementation is three small pieces in `Normalization/`:
-
-1. **`SubtitleParser.Parse`** splits the file into blocks and builds a `SubtitleCue` for each one. It handles CRLF, a BOM, and multi-line cues. WebVTT `NOTE`, `STYLE` and `REGION` blocks are skipped.
-2. **`NormalizeAsync` per cue.** Markup tags such as `<i>` or `<v Bob>` are stripped and multi-line text is joined into one line before the model sees it.
-3. **`SubtitleParser.Write`** serializes the cues back to the same format.
-
-The cue type keeps the timing line as a raw string, so nothing can drift:
-
-```csharp
-public sealed record SubtitleCue(string? Identifier, string Timing, string Text);
-```
-
-That means WebVTT cue settings like `align:start` survive the round trip, along with cue identifiers.
-
-The core of the loop is short:
-
-```csharp
-foreach (var cue in cues)
+using var whisper = await WhisperClient.CreateAsync(new WhisperOptions
 {
-    var plain = Regex.Replace(cue.Text, "<[^>]+>", string.Empty);
-    plain = Regex.Replace(plain, @"\s+", " ").Trim();
+    Model = KnownWhisperModels.All[0],
+    EnableTimestamps = true,
+});
 
-    var cleaned = await NormalizeAsync(plain, options, cancellationToken);
+var transcription = await whisper.TranscribeAsync(input);
 
-    if (cleaned.Length == 0 && dropEmptyCues)
-        continue;
+var rawCues = transcription.Segments!
+    .Select(s => SubtitleCue.FromTimes(s.Start, s.End, s.Text.Trim(), format))
+    .ToList();
 
-    result.Add(cue with { Text = cleaned });
-}
+using var normalizer = await TranscriptNormalizer.CreateAsync();
+var cleaned = await normalizer.NormalizeSubtitlesAsync(
+    SubtitleParser.Write(rawCues, format), format);
+
+await File.WriteAllTextAsync(output, cleaned);
 ```
+
+Run it:
+
+```bash
+dotnet run -- episode.wav            # writes episode.srt
+dotnet run -- episode.wav --vtt      # writes episode.vtt
+```
+
+## A real run
+
+I tested the end-to-end pipeline with a generated WAV file named `pod.wav` in the system temporary directory. I created it with Windows `System.Speech.Synthesis.SpeechSynthesizer`, speaking a short script with deliberate fillers, a stutter and a self-correction. It is a synthetic test clip, not a podcast recording:
+
+> "So um welcome back to the the show. Today we are talking about, uh, local transcription in dot net. We will meet on Thursday no wait Friday at ten thirty."
+
+The output file:
+
+```text
+1
+00:00:00,000 --> 00:00:11,452
+So I'm welcome back to the show. Today we are talking about a local transcription in .NET. We will meet on Friday at 10:30.
+```
+
+The stutter is gone, "dot net" became `.NET`, the self-correction resolved to Friday, and "ten thirty" became `10:30`. Note the `So I'm welcome back`: that mistake came from Whisper Tiny's transcription, and s1-mini cleans text, it does not fix words the speech model got wrong. A bigger Whisper model helps there, at the cost of keeping fewer fillers for s1-mini to clean.
+
+Also note that this short clip produced a single segment. A real podcast produces many, one cue per segment, and the cue length follows Whisper's segmentation.
 
 ## WebVTT works the same way
 
+Pass `SubtitleFormat.WebVtt` (or `--vtt` in the sample). The parser keeps WebVTT cue identifiers and cue settings like `align:start`, and skips `NOTE`, `STYLE` and `REGION` blocks.
+
+## Already have an SRT?
+
+Skip steps 1 and 2. Read your file and call `NormalizeSubtitlesAsync`. The format is auto-detected (content starting with `WEBVTT` is WebVTT, everything else is SRT):
+
 ```csharp
-var vtt = await File.ReadAllTextAsync("episode.vtt");
-
-var cleaned = await normalizer.NormalizeSubtitlesAsync(
-    vtt,
-    SubtitleFormat.WebVtt,
-    new TranscriptNormalizerOptions { Styling = TranscriptStyling.Casual });
+var srt = await File.ReadAllTextAsync("episode.srt");
+var cleaned = await normalizer.NormalizeSubtitlesAsync(srt);
 ```
 
-Input:
+## Testing without a model
 
-```text
-WEBVTT
-
-intro
-00:00:01.000 --> 00:00:02.000 align:start
-<v Bob>um hi
-```
-
-Output (illustrative):
-
-```text
-WEBVTT
-
-intro
-00:00:01.000 --> 00:00:02.000 align:start
-Hi.
-```
-
-## Testing it without a model
-
-The existing `TranscriptNormalizer(IChatClient)` constructor makes this easy to test offline. The tests use a fake chat client that returns queued responses:
+The automated unit tests do not consume an audio file. They use a fake `IChatClient` to test subtitle parsing, writing, timestamp formatting and normalization. The manual end-to-end run described above used the generated `pod.wav` file. The `TranscriptNormalizer(IChatClient)` constructor makes the subtitle logic easy to test offline with a fake chat client:
 
 ```csharp
 var fake = new FakeChatClient();
@@ -162,13 +172,13 @@ var output = await normalizer.NormalizeSubtitlesAsync(srt);
 Assert.Equal(3, fake.CallCount);
 ```
 
-Because the parser and writer are plain code, the timestamp guarantees are checked with exact string comparisons, no model required.
+The parser and writer are plain code, so the timestamp guarantees are checked with exact string comparisons.
 
-## Known limitation: cues are cleaned one at a time
+## Known limitations
 
-The model is stateless, so each cue is normalized without seeing its neighbors. Subtitle cues often split mid-sentence, and in that case punctuation and capitalization will be less accurate than when cleaning full paragraphs. A cue that ends mid-sentence may get a period it does not need.
-
-A future version could merge cues into sentence-sized groups, normalize them, and redistribute the text across the original time ranges. That is a bigger design (word-level timing is lost once filler and self-corrections are removed), so I shipped the simple, predictable version first. If you have podcast SRTs where this matters, please open an issue with a sample.
+- **Cues are cleaned one at a time.** The model is stateless, so it never sees neighboring cues. When a segment ends mid-sentence, punctuation and capitalization are less accurate than on full paragraphs. A future version could merge segments into sentences, clean them, and redistribute the text across the original time ranges.
+- **Timing is segment-level.** Once fillers and self-corrections are removed, word counts change, so word-level timing no longer lines up. Segment-level timing stays accurate, which is what subtitles need.
+- **Transcription errors stay.** s1-mini normalizes text. It does not correct words Whisper misheard.
 
 ## Links
 

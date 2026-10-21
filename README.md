@@ -185,6 +185,8 @@ await File.WriteAllTextAsync("episode.clean.srt", cleaned);
 
 Notes: each cue is normalized independently (no cross-cue context), markup tags are stripped, multi-line cues become one line, and cues that are pure filler are kept empty unless you pass `dropEmptyCues: true` (SRT is renumbered).
 
+Starting from audio instead of an existing SRT? See the [`PodcastToSrt`](src/samples/PodcastToSrt) sample: `ElBruno.Whisper` (with `EnableTimestamps = true`) supplies the segments and timestamps, then s1-mini cleans the text.
+
 ## FP16 is currently broken on CPU
 
 `elbruno/s1-mini-onnx` also has an `fp16/` subfolder, but that variant fails at inference on CPU with `onnxruntime-genai` 0.15.1 (upstream ORT GQA `repeat_kv` Reshape shape-mismatch bug). **Use INT4 (the default).** This library will not switch to FP16 automatically.
@@ -206,7 +208,7 @@ dotnet test ElBruno.S1Mini.slnx --framework net8.0
 
 ## What's New
 
-- 🎞️ **`v0.2.0` SRT and WebVTT support** — `NormalizeSubtitlesAsync` cleans every cue's text and keeps the original timestamps untouched.
+- 🎞️ **`v0.2.1` SRT and WebVTT support** — `NormalizeSubtitlesAsync` cleans every cue's text and keeps the original timestamps; `SubtitleCue.FromTimes` builds cues from Whisper segments. New `PodcastToSrt` sample: audio → Whisper → s1-mini → `.srt`.
 - 📚 **`v0.1.2`** — documentation release: the package page now shows before/after examples, corrects the upstream accuracy attribution, and refreshes the author links. No library code changes.
 - 🦺 **ORT-GenAI temperature-0 crash guard** — the native `temperature=0` divide-by-zero trap is guarded at the runtime layer; greedy decoding is safe for every call.
 - 🎙️ **`LiveMicTranscription` sample** — microphone → Silero VAD → Whisper → s1-mini, fully on-device, with `--save-audio` / `--wav` replay for reproducible testing.
