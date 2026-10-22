@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:24,020
+Buenas, buenas, bienvenidos a otro episodio de No Tiene Nombre, feliz año nuevo, estamos en el 2026 y si pensabas que ibas a empezar el año de una forma tranquilita, repasando, festejando
+
+2
+00:00:24,020 --> 00:00:48,640
+el 31 de diciembre los amigos de DeepSick han soltado una bomba de las grandes de las grandes y mire que ya hablamos bastante de sí por aquí y ha hecho que se revolucione todo. Así que a ver cómo empezamos el 20 26 porque va a ver voy a empezar yo hablé de DeepSick varias veces busqué luego por ahí ya tendría que hacerme una AI que os ayude a buscar a ver cuando Bruno habló de voy a hacerle se voy a agregar en no tiene nombre punto con un buscador con una AI inteligente que te diga cuando hablé de algunos
+
+3
+00:00:48,640 --> 00:01:12,120
+temas. Me lo apunto como un pet project para este año. Mientras tanto, DeepSync. Hagamos memoria. Si recién sos nuevo por aquí y demás, DeepSync es una startup china que el año pasado o el otro, si el año pasado, ahora que tenemos el 26 año pasado, causó un terremoto en la industria tecnológica porque lanzaron un modelo que era el R1 que competía mano a mano con G, en esa época GPT4 y
+
+4
+00:01:12,120 --> 00:01:30,000
+Cloud Sonet de Anthropi. Pero lo interesante es que con una fracción del costo, según los números que los compartieron, gastaron entre 5 a 6 millones de dólares para entrenar el modelo y por otro lado, la competencia por ejemplo OpenEA y gastó más de 100 millones en entrenar a GPT4. La diferencia
+

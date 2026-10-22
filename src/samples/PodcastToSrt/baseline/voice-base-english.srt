@@ -1,0 +1,4 @@
+1
+00:01:00,000 --> 00:01:25,000
+With that GPT4 and the Anthropic Clouds. But the interesting thing is that with a cost fraction, according to the numbers that I shared, they spent between $5 to $6 million to train the model, and on the other hand, the competition, for example, they open and spend more than $100 million in training GPT4. The difference is brutal, right? It is to compare the performance, I don't know, it's like compared to the performance of an indie movie,
+

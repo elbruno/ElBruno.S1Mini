@@ -1,0 +1,492 @@
+{
+  "input": "Recording.m4a",
+  "model": "whisper-base",
+  "language": "es",
+  "Translate": false,
+  "cleanup": "Off",
+  "appliedCleanup": false,
+  "sourceOffsetSeconds": 0,
+  "audioSeconds": 1408.9173125,
+  "processedSeconds": 1408.9173125,
+  "complete": true,
+  "elapsedSeconds": 153.0439111,
+  "whisperPackageVersion": "0.9.0",
+  "whisperAssemblyVersion": "0.8.0.0",
+  "byteLevelDecodingAdapter": true,
+  "framework": ".NET 8.0.32",
+  "processorCount": 32,
+  "windows": [
+    {
+      "offsetSeconds": 0,
+      "durationSeconds": 23.06,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Buenas, buenas, bienvenidos a otro episodio de No Tiene nombre, feliz a\u00F1o, nuevo estamos en el 2026 y si pensaba que iba a empezar a ca\u00F1o de una forma tranquilita, repasando, festejando el 31 de diciembre de los amigos de DeepSick han soltado una bomba de las grandes, de las grandes simila que se hablamos bastante de Deep por aqu\u00ED y ha hecho que se revolucione todo.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 23.06,
+      "durationSeconds": 24.96,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "As\u00ED que a ver c\u00F3mo empezamos al 26, porque bueno, a ver, voy a empezar su sable de DeepSick varias veces, busquelo por ah\u00ED, ya tendr\u00EDa que hacerme una ea que os ayude a buscar, a ver, cuando uno habl\u00F3 de, bueno, voy a hacerle, voy a agregar el notinombre.com, un buscador con una ea inteligente que te diga cuando hablo de algunos temas, me la punto como un pet project para este a\u00F1o, mientras tanto, DeepSick, hagamos memoria, si reci\u00E9n son nuevos por aqu\u00ED, adem\u00E1s, DeepSick es un",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 48.02,
+      "durationSeconds": 24.96,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Argentina que el a\u00F1o pasado o el otro, si el a\u00F1o pasado, ahora que tenemos el 26 de los a\u00F1os pasado, caus\u00F3 un terremoto en la industria tecnol\u00F3gica porque lanzaron un modelo que era el R1 que compet\u00EDa mano a mano con gn esa \u00E9poca gpt4 y cloudzone de antropi. Pero lo interesante es que con una fracci\u00F3n del costo, seg\u00FAn los n\u00FAmeros que yo os compartieron, gastaron entre 5 a 6 millones de d\u00F3lares para entrenar el modelo",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 72.98,
+      "durationSeconds": 23.64,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "y por otro lado la competencia por ejemplo, openen a ir a gastar m\u00E1s de 100 millones en entrenar a GPT4. La diferencia es brutal, no? Es comparar el presupuesto, no s\u00E9, es como comparar el presupuesto de una pel\u00EDcula indie con el de Avengers, pero la pel\u00EDcula indie es buen\u00EDsima, es buen\u00EDsima y hace que compita con los de Marvel. Aqu\u00ED la clave estuvo en la eficiencia algoritmica, porque Deep Six",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 96.62,
+      "durationSeconds": 23.5799999,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "us\u00F3 chips a 800 envidia que son una versi\u00F3n mucho, mucho menos potente, pero despu\u00E9s del ban que le puso Estados Unidos. A China es el que China puede importar hoy. Entonces como tiene restricci\u00F3n, ese es el \u00FAnico, como la \u00FAnica GPU que pudieron importar para empezar a trabajar. Y en lugar de quejarse la cultura de nuestros amigos dijo, bueno, a ver, si no tenemos la mejor chips,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 120.2,
+      "durationSeconds": 24.2,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "hagamos mejores algoritmos y pun, funcion\u00F3. El modelo que del que est\u00E1bamos hablando, el R1 en ese momento usaba razonamiento, similar al O1 de esa \u00E9poca de OpenAI y demostr\u00F3 en esas d\u00EDas que se pod\u00EDa hacer inteligencia artificial sin gastar fortunas en hardware. El modelo de c\u00F3digo abierto bajo licencia mid y tambi\u00E9n gracias a esto cualquiera pod\u00EDa usarlo, modificarlo",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 144.4,
+      "durationSeconds": 23.4,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "e inclusive comercializarlo. Tengo mis dudas con la licencia aqu\u00ED, pero creo que tambi\u00E9n hay productos que estaban basados. Entonces, \u00BFqu\u00E9 pasa? El saltamos un a\u00F1o, saltamos al 31 de diciembre, avance r\u00E1pido esta semana, y mientras todo estaba prepar\u00E1ndose para las fiestas, bien a Deepseek y suelta una bomba. Porque provocaron un paper que se llama Manifold Constraint Hyper Connections.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 167.8,
+      "durationSeconds": 24.4,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "MHC para los amigos. Voy a empezar a decirle MHC. Y este no es un paper cualquiera. Est\u00E1 co-escrito por el propio CEO y fundador Deepseek, LionWenfang, y lo subi\u00F3 \u00E9l personalmente a RxIV, que es donde est\u00E1n todos los paper de Intel que se reviciaba, le investigaci\u00F3n, etc\u00E9tera. Cuando el CEO de una empresa sube directamente el investigaci\u00F3n se mete directamente el investigaci\u00F3n t\u00E9cnica sube, el mismo el",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 192.2,
+      "durationSeconds": 23.44,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "y peri\u00F3dimas a algo pasa. Y qu\u00E9 propone este paper? B\u00E1sicamente es una nueva forma de estructurar red en neuronales que las hace m\u00E1s estables, m\u00E1s escalables y m\u00E1s eficientes durante el tren en entrenamiento. Y lo importante es siguiendo la l\u00EDnea de Dipsick con un costo computacional m\u00EDnimo, m\u00EDnimo adicional m\u00EDnimo. Entonces,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 215.64,
+      "durationSeconds": 24.72,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Puede dar a explicarlo sin entrar demasiado en detalles t\u00E9cnicos, porque si no estuvo hacer una clase de \u00E1lgebra, nadie quiere eso un viernes, pero vamos a empezar a explicar que son cosas como las conexiones residuales. Tiene un poco para atr\u00E1s, \u00BFno? Y alg\u00FAn moncro que en alg\u00FAn episodio lo he hecho, sino busque en alg\u00FAn v\u00EDdeo m\u00EDo donde hablo c\u00F3mo funcionan los transformers y dem\u00E1s. La red en neuronales modernas, especialmente los transformers, que son la base de los modelos como los LGBT o los modelos de cloud,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 240.36,
+      "durationSeconds": 23.8,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "funcionan con algo que se llama conexiones residuales. Esto fue inventado all\u00E1 por el 2015, creo, 2015, 2016, porque el 2017 sali\u00F3 al paper de los transformers, pero en el 2015 m\u00E1s o menos lo que b\u00E1sicamente permit\u00EDa es que las redes sean m\u00E1s profundas que sean m\u00E1s inteligentes, por eso la una manera sin que se pierde la informaci\u00F3n o que se distorsiona demasiado.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 264.16,
+      "durationSeconds": 24.0799999,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "mientras pasa de una capa a la otra, recordemos que las redes unijeronales son paso de informaci\u00F3n entre diferentes capas con decisiones en cada una de las capas \u00BFno? ac\u00E1 se podr\u00EDa pensar esto como si fuera el juego del tel\u00E9fono descompuesto donde al final del juego el mensaje sigue siendo correcto porque hay trucos o atajos no s\u00E9 cu\u00E1l es la mejor forma para traducir esto que permiten que la informaci\u00F3n original se percibe mejor",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 288.24,
+      "durationSeconds": 23.42,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "El problema que tenemos hoy con esto modelo grande es con los transformes con las arquitecturas de Viplarning de las redes Neonoranes, es que a medida que los modelos son m\u00E1s grandes y m\u00E1s complejos, estas conexiones residuales empiezan a mostrar limitaciones. Se pueden volver inestables, imaginado durante el entrenamiento y el modelo puede explotar, no puede colapsar matem\u00E1ticamente para hacer una madre.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 311.66,
+      "durationSeconds": 24.4,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Es como si, no s\u00E9, alguna vez alguien lo explic\u00F3 y me gust\u00F3 esto es como si construyeron un edificio muy, muy, muy, muy alto, pero los materiales no fueron dise\u00F1ados para soportar tanto peso. Es un momento que colapsa. En septiembre de a\u00F1o pasado unos investigadores propusieron algo llamado Hyper Connections que b\u00E1sicamente expande este concepto de conexiones residuales para permitir que puedan pasar m\u00E1s informaci\u00F3n, m\u00E1s informaci\u00F3n entre las capas.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 336.06,
+      "durationSeconds": 23.2,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "esto era bastante prometedor pero ten\u00EDa algunos problemas era muy inestable, usaba mucha memoria y era cuando los remodenos eran realmente grandes, escalaban mal, era bastante poco fiable. Entonces llega, literalmente dos d\u00EDas llega la gente de DeepSync y entra MHC. Vamos a pensar c\u00F3mo es la soluci\u00F3n que proponen, b\u00E1sicamente",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 359.26,
+      "durationSeconds": 23.78,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Pensad que ten\u00E9s una autopista con muchos carnes donde pasan los autos, los pasan los coches y lo que hacen las hiper conexions es abrir m\u00E1s carriles para que en la autopista fluya m\u00E1s informaci\u00F3n. Pero no hay control de tr\u00E1fico. Los autos pueden fluir libremente, pero a veces cuando pasaba un problema, se generan empatosamientos, accidentes, etc. Lo que Dipsy propone con im\u00E9ches es agregar resta",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 383.04,
+      "durationSeconds": 23.34,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Tricciones, matem\u00E1ticas en esta autopista que van a mantener un flujo de informaci\u00F3n constante y va a estar bajo control. Usan a lo que se llama Manifold, no s\u00E9 c\u00F3mo se trauce Manifold, no encontr\u00E9 ninguna palabra que me guste, pero b\u00E1sicamente pensad que es como un artefacto matem\u00E1tico que puede ser tan simple como un punto o tan complejo como una arquitectura en diferentes dimensiones para controlar el flujo de informaci\u00F3n.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 406.38,
+      "durationSeconds": 23.4,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Entonces lo que hace MHC es proyecta a las conexiones sobre este manifold y mantiene la estabilidad mientras viajan las capas del modelo, sobre que los gradientes que est\u00E1n ah\u00ED, tato de que no se puede explicar, lo que hace en cristiano, b\u00E1sicamente hace que el entrenamiento sea m\u00E1s estable sin sacrificar el rendimiento. Los resultados, por lo que dice el PIPE, estos son impresionantes, porque DeepSync provo MHC en modelos de 3000 millones.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 429.78,
+      "durationSeconds": 23.16,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "9.000 millones y 27.000 millones de par\u00E1metros y encontraron mejoras con sintentes en los benchmark, especialmente en las tareas de razonamiento. Recordemos que esto es cuando el modelo usa varios pasos para llegar de A a B. Y la parte importante que todo esto lo hacen solo con un aumento del 7.7% en tiempo de entrenamiento, que esto es brutal, es decir, baja tener una",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 452.94,
+      "durationSeconds": 23.96,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "m\u00E1s grande, entrenando un poco m\u00E1s, pero la calidad de los modelos grande va a ser brutal, de nuevo tratando de poner esto perfectivo, porque me tienen tiempo de hablar de nubes y dem\u00E1s as\u00ED, est\u00E1n logrando modelos mejores, mejores modelos y m\u00E1s estables con uno vergea m\u00EDnimo a nivel de gasto computacional, es como mejorar el rendimiento del motor de tu auto y que consuma solamente un poquito m\u00E1s de gasolina, pero ahora va 20% m\u00E1s r\u00E1pido,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 476.9,
+      "durationSeconds": 24.12,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "y es mucho m\u00E1s fiable. Y esto, hoy por hoy, es un GameChanger. \u00BFPor qu\u00E9? Vamos a ver un poco de la situaci\u00F3n actual. El timing, \u00BFno? Los paper t\u00E9cnicos que ha sacado DeepSick siempre han sido buenos predictores de lo que viene despu\u00E9s. Antes de el asamiento del R1, publicaron una investigaci\u00F3n similar. Antes del UB3, que tambi\u00E9n es otro modelo muy famoso que tienen, tambi\u00E9n.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 501.02,
+      "durationSeconds": 24.84,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Este patr\u00F3n sugiere que est\u00E1n trabajando en algo grande, probablemente su pr\u00F3ximo modelo, flagship que muchos est\u00E1n especulando que va a ser el R2. Segundo, esto no es solamente una mejor incremental, es un cambio fundamental en c\u00F3mo se pueden estructurar las redes neuronales. Deepseek demuestra una vez m\u00E1s que todav\u00EDa hay mucho margen para la innovaci\u00F3n en lo que es la arquitectura de redes neuronales.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 525.86,
+      "durationSeconds": 23.22,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "No s\u00F3lo todos tirar GPUs y lo a lo bestia y comprar Nvidia y cosas as\u00ED, se puede tambi\u00E9n ganar m\u00E1s performance cuando, cuando se invierte en mejores modelos arquitecturas. Y esto es especialmente importante en el contexto geopol\u00EDtico, s\u00ED, toca hablar un poquito de China, porque China enfrenta restricciones series en el acceso a los",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 549.08,
+      "durationSeconds": 23.3,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "chip m\u00E1s avanzados, lo que comentamos al principio, entonces, porque las reticciones que le pudo estar unido, no en v\u00EDdeo no puede vender sus mejores GPUs all\u00E1, por ejemplo, solamente pueden exportarlos, 800, pero no los 800, los 800 son unas versiones limitadas, lo que hace DeepSick es convierte esta limitaci\u00F3n en una venta, en lugar de competir en una carrera de hardware que no van a poder ganar",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 572.38,
+      "durationSeconds": 24.22,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "est\u00E1n ganando ineficiencia algoritmica, est\u00E1n demostrando que con mejores almorismos, software m\u00E1s inteligente y arquitecturas innovadoras, se puede lograr muy buenos resultados, comparar a los top-car de mejor modelos con muchos menos recursos. Pero, ojo, tambi\u00E9n hay una pata para tener en cuenta aqu\u00ED. Lo haremos el otro d\u00EDa, China ya est\u00E1 empezando a tener sus propios dise\u00F1adores de chips,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 596.6,
+      "durationSeconds": 24.56,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "China, ya decir, este a\u00F1o va a ser el a\u00F1o donde Nvidia va a seguir siendo el l\u00EDder, tal vez, pero va a tener otras cosas. \u00BFPor qu\u00E9? Huawei, nombre que a muchos sonar\u00E1, tambi\u00E9n est\u00E1 metiendo el juego con sus chips a 60. Estos chips no son tan potentes como los H100 de Nvidia para entrenar modelos. Pueden b\u00E1sicamente, han hecho unos 20 m\u00E1s y unas comparaciones y dicen que el Accent 910",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 621.16,
+      "durationSeconds": 24.48,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "puede ofrecer aproximadamente el 60% del rendimiento de 1 H100 para inferencia. Pero, pero que inferencia es cuando el modelo es entrenado y genera respuestas. Pero hay 60% en un chip de tecnolog\u00EDa china que propiedad china y que funciona y dem\u00E1s ah\u00ED. Es algo a tener en cuenta y la inferencia el uso de los modelos va a ser cada vez m\u00E1s importantes. Barclay estima que para este",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 645.64,
+      "durationSeconds": 23.56,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "a\u00F1o el 70% de la demanda de c\u00F3mputo, de inteligencia artificial vendr\u00E1 de inferencia no de entrenamiento, el 70% del uso de GPU, el 70% de ojos de c\u00F3mputo de AI este a\u00F1o va a ser para usarla no para entrenarla. Entonces China, con sus chip dom\u00E9sticos optimizados para interferencia y modelos eficiente de c\u00F3mulo de DeepSick, podr\u00EDa estar muy bien posicionada. Y",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 669.2,
+      "durationSeconds": 24.26,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Cuando empez\u00E1s a ver esto en el par\u00F3lamo m\u00E1s r\u00E1pido, de la inteligencia artificial, el 26 es, va a ver un par de cosas de la en cuenta. Por un lado, va a ver una competencia m\u00E1s intensa. Openeray en Jadmitio, que en la competencia de modelos de c\u00F3digo abiertos chinos, incluyendo DeepSip, influy\u00F3 en su decisi\u00F3n de sacar el GPT-GoSS, sus propios modelos de c\u00F3digo abierto. Samarmad dijo, literalmente, en los de aqu\u00ED en las notas,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 693.46,
+      "durationSeconds": 24.16,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Est\u00E1 claro que si no a lo hac\u00EDamos nosotros, el mundo iba a estar m\u00E1s dormente construido sobre modelos chinos de c\u00F3digo abierto. Y ojo, ac\u00E1, Alman le tir\u00F3 un palo sin mencionar a lo que yo considero que son los l\u00EDderes en el open source que la gente demeta con su modelo es nama. Ya hablamos de dos tambi\u00E9n la semana pasada. Esto es enorme, significa que los gigantes de Estados Unidos est\u00E1n reaccionando a lo que est\u00E1 pasando en China. Habimos tambi\u00E9n lo que hizo Met.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 717.62,
+      "durationSeconds": 25,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "cuando compro bueno. Ya no es una competencia donde sale todo de Silicon Valley sino que China est\u00E1 forzando a los laboratorios occidentales a acelerar el juego. Otro punto importante, segundo punto es, vamos creo yo que va a haber un cambio muy grande en lo que significa la ventaja competitiva en inteligencia artificial. Tradicionalmente, la ventaja ven\u00EDa tener m\u00E1s GPUs, m\u00E1s datos, m\u00E1s dinero.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 742.62,
+      "durationSeconds": 23.18,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Pero DeepSick est\u00E1 demostrando que las inversiones y las innovaciones en arquitecturas de redes neuronales, foco en eficiencia pueden ser igual de valiosas sino m\u00E1s. Para StarTaps, en verdad, peque\u00F1as, esto es una noticia excelente. Significa que no necesita ser OpenAI, con miles de millones de d\u00F3lares en financiamiento y con tus planes de financieros que son una locura,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 765.8,
+      "durationSeconds": 23.5,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "para poder hacer contribuciones al campo. Se puede competir con inteligencia y innovaci\u00F3n. Y el tercer punto a tener en cuenta es que los modelos de c\u00F3digo abierto van a seguir ganando m\u00E1s y m\u00E1s tracci\u00F3n. Lip-Dip-Sick libera los modelos de la obsesi\u00F3n de MIT, lo que los hace completamente comercializables. De nuevo, yo tengo mis dudas ac\u00E1, pero creo que s\u00ED. Empezad en todo el mundo, ya",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 789.3,
+      "durationSeconds": 24.44,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "operadores de telecomunicaciones en China est\u00E1n integrando tipsy Nissan, VyV, Gili, China Mobile, todos se est\u00E1n subiendo al tren. Y un cuarto punto, un bueno que tengo aqu\u00ED que me ha saltado el amigo Cloud es que los controles de exportaci\u00F3n de chips est\u00E1n forzando a China hacia la autosuficiencia tecnol\u00F3gica m\u00E1s r\u00E1pido de lo que nadie esperaba. El presidente de China, Xi Jinping, ha reiterado",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 813.74,
+      "durationSeconds": 23.52,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "varias veces, varias veces, casi muchas veces, el llamado a lo que ellos dicen la autosuficiencia en inteligencia artificial. Por un lado, Huawei est\u00E1 estocando chipsacen, alivaba esta esp\u00E1tmila de modelos Cuen, si sumas todo esto te das cuenta que el ecosistema chino se est\u00E1 fortaleciendo. Pero bueno, ya me fui un poco con la ramas, porque hablamos de la parte t\u00E9cnica al lado t\u00E9cnico fascinante de este paper, \u00BFno?",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 837.26,
+      "durationSeconds": 24.02,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Lo que hizo, a ver, hay algo que para m\u00ED es s\u00FAper elegante, s\u00FAper bonito en lo que hizo DeepSy con MHC. El problema fundamental con la HyperConnection era que las originales, no? Era con que comprometida lo que se llama el mapeo de identidad, \u00BFno? Es cuando pasan datos de un punto a otro entre las creaciones residuales. Esta propiedad, el mapeo de identidad es lo que permite que la red...",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 861.28,
+      "durationSeconds": 23.2,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Neuronales, las Deep Learning Networks funcionen bien, porque garantizan que la se\u00F1al se pasa sin demasiada distorsi\u00F3n. Cuando la HSC, las hiper conexi\u00F3n, mejoraban, trabajaban, b\u00E1sicamente lo que hac\u00EDan era como abri\u00E9rdela las comportas de una presa, m\u00E1s agua fluye pero pierdes control. Cuando llega el MHC, lo dipzig, es impone estas restricciones,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 884.48,
+      "durationSeconds": 24.42,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "y hace que todo esto funciona. El flujo es pandido en la estabilidad a todo se preserva. Y la belleza aqu\u00ED es que lo lindo de esta parte es que no solamente est\u00E1n limitando el flujo, sino que est\u00E1n encontrando la forma \u00F3ptima de expandirlo sin perder el control. Es como tener, volendo a la autopista, al ejemplo de la autopista, es como tener m\u00E1s carriles, que ten\u00E9s m\u00E1s carriles, van m\u00E1s autos, van m\u00E1s r\u00E1pidos, pero tiene sistemas de control desde el trafico inteligente que",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 908.9,
+      "durationSeconds": 24.68,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "previera los accidentes y implementaron esto que en lugar de utilizar m\u00E1s memoria o tiempo de c\u00F3mputo b\u00E1sicamente MHC logr\u00F3 los beneficios con estas. Por lo decirlo, en una manera de estos objetos matem\u00E1ticos es de artilugios, matem\u00E1ticos, artipegios, como ten\u00EDamos mi amigo y te ya, pero con un costo m\u00EDnimo, m\u00EDnimo. En un modelo de 27 mil millones de par\u00E1metros MHC logr\u00F3 una mejora de",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 933.58,
+      "durationSeconds": 23.62,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "0.021 en la p\u00E9rdida en el trinamiento comparado con t\u00E9cnicas anteriores manteniendo el incremento del 6.7% en el tiempo de entrenamiento. Esto es brutal. Entonces, \u00BFqu\u00E9 vamos a poder esperar para este a\u00F1o? Primero, yo creo que es casi seguro que en los pr\u00F3ximos d\u00EDas vamos a ver otro gran modelo de DeepSync, probablemente en los regos. Por lo que comentaba antes que cada vez que sacan un paper de investigaci\u00F3n al poco tiempo parece un modelo de los buenos.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 957.2,
+      "durationSeconds": 24.72,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Si R2 y Compora MHC a gran escala podr\u00EDamos estar viviendo otro gran momento de Ypsik, si me da el que vivimos el a\u00F1o pasado cuando R1 os acuyo la industria. Poderos que compite con los modelos frontiers de OpenAI, Antropik, etc. Pero construido con una fracci\u00F3n del costo y sobre principios arquitecturas que son realmente inovadores. Seguros, segunda parte a tener en cuenta.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 981.92,
+      "durationSeconds": 23.32,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "otros laboratorios van a copiar estas t\u00E9cnicas r\u00E1pidamente. Hay una analista de Omnia que se llama Lean Suju, que predijo que la innovaci\u00F3n de Deepseek va a tener un efecto domino en toda la industria con sus lab rivales desarrollando sus propias versiones del enfoque. Yo espero que por ejemplo los amigos de Mistral en Europa hagan algo parecido. La disposici\u00F3n... esto que hace Deepseek de compartir",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1005.24,
+      "durationSeconds": 24.46,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "su investigaci\u00F3n, verdaderamente, es una demostraci\u00F3n de confianza como una estrategia inteligente. Est\u00E1n diciendo, miren, incluso si saben c\u00F3mo lo hacemos, todav\u00EDa podemos mantenernos adelante. Es una power move de las buenas. Hablarse, seguir hablando de la competencia de Estado Unido y China va a ir a decidirse, va a seguir creciendo a lo bestia. No s\u00E9 qu\u00E9 pasar\u00E1. Puede ser que por un lado, Estados Unidos, en Duresca m\u00E1s, todav\u00EDa los controles de",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1029.7,
+      "durationSeconds": 23.98,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "de chip, pero vamos a ver qu\u00E9 pasa. Sin embargo, paradogicamente estas restricciones hacen que se aceleren innovaci\u00F3n China en lugar a frenarla y adem\u00E1s como los chinos abren lo que los gente de DeepSick abri\u00F3 lo que lo hicieron, lo pens\u00F3, lo que est\u00E1n haciendo, hace que otros laboratorios de cualquier otro lugar del mundo tambi\u00E9n tengan acceso a esto, \u00BFno? El a\u00F1o pasado, Lian Gwen Feng, el CEO de dijo",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1053.68,
+      "durationSeconds": 24.94,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "el dinero nunca ha sido el problema para nosotros, las prohibiciones en el Nvidia chips son el problema y est\u00E1n encontrando formas creativas de trabajar. Vamos a ver tambi\u00E9n un cambio en c\u00F3mo creo yo que c\u00F3mo progresa le hay, durante a\u00F1os el modelo el mal trascido m\u00E1s grande, mejor, m\u00E1s datos, mejor, m\u00E1s GPUs mejor, saber escalar, escalar, escalar, pero",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1078.6199999,
+      "durationSeconds": 24.7399999,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "la dimensi\u00F3n de la eficiencia est\u00E1 teniendo cada vez m\u00E1s importancia que tambi\u00E9n puedes utilizar los recursos que tienes y en un mundo donde la capacidad de c\u00F3mputo se est\u00E1 volviendo cada vez m\u00E1s cara a lo que pasa con las memorias con las GPU, etc\u00E9tera este concepto de eficiencia puede ser una ventaja competitiva enorme en estos d\u00EDas as\u00ED que vamos a ver qu\u00E9 pasa aqu\u00ED tambi\u00E9n o no son de nuestro de rosa, hay preguntas importantes para que",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1103.3599999,
+      "durationSeconds": 23.22,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "que se pueden responder. Por ejemplo, \u00BFqu\u00E9 tambi\u00E9n escala MHC m\u00E1s all\u00E1 de los 27 mil millones de par\u00E1metros? Que es lo que han dado. Los experimentos de DeepSick fueron el modelo real, le activamente peque\u00F1os comparados con los modelos actuales, los modelos Frontier que tienen cientos de miles de par\u00E1metros, habr\u00EDa que ver si las ventaja que da MHC se mantienen en esta escala. Segundo,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1126.58,
+      "durationSeconds": 24.9,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "como funciona, MHC que con modelos que son multimodales, que no solamente trabajan con texto, sino tambi\u00E9n con im\u00E1genes, video, audio, por lo que vemos hasta ahora, lo que est\u00E1 en este paper, la mayor\u00EDa de la investigaci\u00F3n hasta ahora s\u00F3lo ha sido el modelo del lenguaje de texto puro. Est\u00E1 tambi\u00E9n, hay una especie de grays, de \u00E1rea gris donde nadie se sabe si realmente DeepSick entre 9 y 1",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1151.48,
+      "durationSeconds": 24.7399999,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "con los recursos que dicen, hay como una especie de acceptismo en la comunidad sobre los costos, realmente gastaron cinco millones o gastaron mucho m\u00E1s. Algunos analistas argumentan que las cifras publicadas no incluyen el hardware, la infraestructura y los costos de imas de que podr\u00EDan llevar la inversi\u00F3n total a 100 millones. Tambi\u00E9n est\u00E1 la controversia sobre CDP-SIC, justo la t\u00E9cnica de distillation, la garromo de los de OPEREA,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1176.22,
+      "durationSeconds": 24.7399999,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "para entrenar su modelo, su propios modelos. Distillation es cuando usa un modelo grande para entrar uno m\u00E1s peque\u00F1o y parece, parece hay evidencia que algunos modelos hicieran a veces generan texto que sugiere que fueron entrenados por opinar. As\u00ED que bueno hay preguntas complicadas en ese aspecto sobre propiedad intelectual, \u00E9tica, etc\u00E9tera, \u00BFno? Justo utilizar \u00E1upos de modelos cerrados para entrenar modelos abiertos. Puf, los tribunales chinos probablemente dir\u00EDan",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1200.96,
+      "durationSeconds": 23.52,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "S\u00ED, pero no s\u00E9, pero es una \u00E1rea gris, \u00BFno? Y tambi\u00E9n el \u00FAltimo punto es la cuesti\u00F3n geopol\u00EDtica. La IA se volve m\u00E1s y m\u00E1s integral en cuestiones globales de econom\u00EDa, seguridad nacional, etc\u00E9tera. \u00BFC\u00F3mo afecte el ascenso de estas IA\u0027s chinas a las relaciones de Estados Unidos y China? Va a haber una guerra fr\u00EDa tecnol\u00F3gica. De ah\u00ED, yo creo que s\u00ED.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1224.48,
+      "durationSeconds": 23.9,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "porque parece que por lo que vemos hoy, por ejemplo, con la compra que hizo meta hace dos d\u00EDas y dem\u00E1s as\u00ED hay preocupaci\u00F3n desde el punto de vista de Estados Unidos de c\u00F3mo crece la AI en China pero bueno, mucho es la comunidad cient\u00EDfica, ven con buenos ojos a la apertura y transparencia de la investigaci\u00F3n china muchas cosas a tener en cuenta \u00BFno? Y una cosa que no quer\u00EDa nombrar aqu\u00ED que la otra vez creo que no es lo nombre es",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1248.38,
+      "durationSeconds": 24.76,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Lian Welfeng, el fundador de CIP y no es el t\u00EDpico CEO Tech, es un investigador, el tipo es un researcher, es un tipo de que investiga y que se involucra directamente del trabajo t\u00E9cnico. Tiene una cultura de empresa, parece, parece que tambi\u00E9n es \u00FAnica, no? Exemplados hablan de tener acceso a recursos computacionales abundantes, libertad para experimentar, voy a intentar encontrar m\u00E1s informaci\u00F3n sobre c\u00F3mo funciona Dipsick,",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1273.14,
+      "durationSeconds": 23.46,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "para contar al respecto porque parece que es una empresa muy interesante, recrutan en los investigadores de las mejores universidades chinas, contratos de fuera, campos de gente sobre ciencia de la computaci\u00F3n, es una cosa muy rara, muy linda y algo tiene si tanto ruido hace. Entonces, nosotros como usuarios finales, vamos a tener m\u00E1s Deep Seek",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1296.6,
+      "durationSeconds": 23.04,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Vamos a tener otro modo de los chinos que van funcionando muy bien, competencia para Gpt es Cloud Gemini, siempre la competencia es buena para los unidos, segundo si esto funciona y funciona bien, los precios van a ser m\u00E1s bajos, vamos a ver qu\u00E9 tanto, que pasa ah\u00ED, la happy deep seek son siempre mucho, mucho m\u00E1s baratas que las de OpenAI, as\u00ED que si todas tienen que competir en precio, creo que todos ganamos y el tercer pan es el tercer...",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1319.64,
+      "durationSeconds": 23.46,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "punto es mas innovacion siempre cuando hay innovacion en este tipo de arquitecturas vamos a tener tecnolog\u00EDas que avanzan mas rapigos as\u00ED que vamos a tener aqu\u00ED yo creo que va a ser un a\u00F1o lindo mira como empezamos con un bombazo la idea no es algo que est\u00E1 por verir est\u00E1 aqu\u00ED ahora y va a una velocidad brutal y si que el paper DMHC son solamente una se\u00F1al de que",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1343.1,
+      "durationSeconds": 23.46,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "esto no se acaba, esto sigue y que bueno, mientras pase todo esto, vamos a tener cada vez mejores juguetes como digo yo para aprender a entrenar y dem\u00E1s y si alguien le gusta leer este tipo de cosas, vamos a... de en un vistazo al paper porque es impresionante lo que ha puesto esta gente \u00BFno? Hay un punto aqu\u00ED que alguien lo dejo me preguntaba, \u00BFqu\u00E9 pasa con la Zilal? \u00BFY est\u00E1 cerca o no? Tengo unas notas, voy a hacer un episodio sobre lo que yo",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1366.56,
+      "durationSeconds": 23.62,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "pienso a sobre la Azi, pero lo dejo as\u00ED, no voy a sacudarlo ahora. As\u00ED que bueno, Deep Six saco del tablero otra vez m\u00E1s, empezamos al 2026 con todo, no puedo hacer episodios cortitos porque tanta info es imposible resumirla en 10 minutos, pero provecho que van a quedar episodios de 10 minutos a partir del que sigue. Seguramente la \u00FAltima predicci\u00F3n ser\u00E1 que para mediados al 2026 tendremos el R2.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1390.18,
+      "durationSeconds": 18.7373125,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "seguramente va a ser otro momento. Y cosas por el estilo. Y si es gratis y funciona bien en local, mucha gente va a estar muy muy muy contenta. As\u00ED que bueno, m\u00E1s info, el no tiene nombre.com. Voy a ponerme como pede, Procek el bot, inteligente ah\u00ED. Nos vemos en la pr\u00F3xima. Hasta luego y de nuevo, feliz a\u00F1o nuevo.",
+      "segmentCount": 1
+    }
+  ]
+}

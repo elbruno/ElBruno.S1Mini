@@ -185,7 +185,9 @@ await File.WriteAllTextAsync("episode.clean.srt", cleaned);
 
 Notes: each cue is normalized independently (no cross-cue context), markup tags are stripped, multi-line cues become one line, and cues that are pure filler are kept empty unless you pass `dropEmptyCues: true` (SRT is renumbered).
 
-Starting from audio instead of an existing SRT? See the [`PodcastToSrt`](src/samples/PodcastToSrt) sample: `ElBruno.Whisper` (with `EnableTimestamps = true`) supplies the segments and timestamps, then s1-mini cleans the text.
+Starting from audio instead of an existing SRT? See the [`PodcastToSrt`](src/samples/PodcastToSrt/README.md) sample. It decodes MP3/M4A with FFmpeg, processes complete recordings in bounded Whisper windows, and preserves absolute offsets in SRT/WebVTT. The repository includes both the voice-only and music-edited NTN 459 recordings for opt-in evaluation.
+
+**Spanish and multilingual audio:** select a multilingual model such as `whisper-base` or `whisper-small` and pass `--language es`. The old `whisper-tiny.en` default is English-only. **s1-mini v1 also supports English only**, so the sample skips cleanup for Spanish/unknown-language output by default. English translation plus cleanup and explicitly experimental Spanish cleanup are separate options. Numeric timestamp preservation does not establish acoustic alignment; reports flag potentially coarse full-window timing.
 
 ## FP16 is currently broken on CPU
 

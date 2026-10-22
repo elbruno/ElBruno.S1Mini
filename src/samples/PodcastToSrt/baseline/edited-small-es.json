@@ -1,0 +1,52 @@
+{
+  "input": "ntn459.mp3",
+  "model": "whisper-small",
+  "language": "es",
+  "Translate": false,
+  "cleanup": "Off",
+  "appliedCleanup": false,
+  "sourceOffsetSeconds": 0,
+  "audioSeconds": 90,
+  "processedSeconds": 90,
+  "complete": true,
+  "elapsedSeconds": 57.1510586,
+  "whisperPackageVersion": "0.9.0",
+  "whisperAssemblyVersion": "0.8.0.0",
+  "byteLevelDecodingAdapter": true,
+  "framework": ".NET 8.0.32",
+  "processorCount": 32,
+  "windows": [
+    {
+      "offsetSeconds": 0,
+      "durationSeconds": 24.02,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Buenas, buenas, bienvenidos a otro episodio de No Tiene Nombre, feliz a\u00F1o nuevo, estamos en el 2026 y si pensabas que ibas a empezar el a\u00F1o de una forma tranquilita, repasando, festejando",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 24.02,
+      "durationSeconds": 24.62,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "el 31 de diciembre los amigos de DeepSick han soltado una bomba de las grandes de las grandes y mire que ya hablamos bastante de s\u00ED por aqu\u00ED y ha hecho que se revolucione todo. As\u00ED que a ver c\u00F3mo empezamos el 20 26 porque va a ver voy a empezar yo habl\u00E9 de DeepSick varias veces busqu\u00E9 luego por ah\u00ED ya tendr\u00EDa que hacerme una AI que os ayude a buscar a ver cuando Bruno habl\u00F3 de voy a hacerle se voy a agregar en no tiene nombre punto con un buscador con una AI inteligente que te diga cuando habl\u00E9 de algunos",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 48.64,
+      "durationSeconds": 23.48,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "temas. Me lo apunto como un pet project para este a\u00F1o. Mientras tanto, DeepSync. Hagamos memoria. Si reci\u00E9n sos nuevo por aqu\u00ED y dem\u00E1s, DeepSync es una startup china que el a\u00F1o pasado o el otro, si el a\u00F1o pasado, ahora que tenemos el 26 a\u00F1o pasado, caus\u00F3 un terremoto en la industria tecnol\u00F3gica porque lanzaron un modelo que era el R1 que compet\u00EDa mano a mano con G, en esa \u00E9poca GPT4 y",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 72.12,
+      "durationSeconds": 17.88,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Cloud Sonet de Anthropi. Pero lo interesante es que con una fracci\u00F3n del costo, seg\u00FAn los n\u00FAmeros que los compartieron, gastaron entre 5 a 6 millones de d\u00F3lares para entrenar el modelo y por otro lado, la competencia por ejemplo OpenEA y gast\u00F3 m\u00E1s de 100 millones en entrenar a GPT4. La diferencia",
+      "segmentCount": 1
+    }
+  ]
+}

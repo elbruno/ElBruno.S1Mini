@@ -1,0 +1,28 @@
+{
+  "input": "Recording.m4a",
+  "model": "whisper-base",
+  "language": "auto-unconfirmed",
+  "Translate": false,
+  "cleanup": "Auto",
+  "appliedCleanup": false,
+  "sourceOffsetSeconds": 60,
+  "audioSeconds": 25,
+  "processedSeconds": 25,
+  "complete": true,
+  "elapsedSeconds": 20.7147791,
+  "whisperPackageVersion": "0.9.0",
+  "whisperAssemblyVersion": "0.8.0.0",
+  "byteLevelDecodingAdapter": true,
+  "framework": ".NET 8.0.32",
+  "processorCount": 32,
+  "windows": [
+    {
+      "offsetSeconds": 60,
+      "durationSeconds": 25,
+      "reportedLanguage": null,
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission Commission",
+      "segmentCount": 1
+    }
+  ]
+}

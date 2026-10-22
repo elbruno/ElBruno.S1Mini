@@ -1,6 +1,6 @@
 ---
 title: "From podcast audio to clean subtitles in .NET: Whisper + s1-mini"
-description: "A complete local pipeline in C#: transcribe a podcast recording with Whisper (with timestamps), clean each segment with s1-mini, and write a ready-to-use SRT or WebVTT file."
+description: "A local C# pipeline from podcast audio to SRT/WebVTT, with multilingual Whisper samples, English-only s1-mini cleanup, and explicit timing limitations."
 date: 2026-10-21
 tags: [dotnet, ai, onnx, whisper, srt, webvtt, subtitles, podcast]
 author: "Bruno Capuano"
@@ -20,9 +20,9 @@ That is fine, because the model does not need to know. The real goal is bigger t
 | 2 | `ElBruno.S1Mini` | Clean each segment's text (fillers, stutters, punctuation, numbers) |
 | 3 | `ElBruno.S1Mini` | Write the segments back as SRT or WebVTT, timestamps untouched |
 
-Everything runs on your machine. Nothing is uploaded.
+Inference runs on your machine. Model files are downloaded on first use; audio is not uploaded.
 
-![Flow: audio, Whisper segments, s1-mini cleanup, subtitle file, with timestamps passing through unchanged](images/26-10-21-srt-flow.png)
+![Flow: subtitle file, parser, text cleanup and writer, with timestamps passing through unchanged](images/26-10-21-srt-flow.png)
 
 > **Why not just give audio to s1-mini?** s1-mini never hears audio and never sees timestamps. Whisper owns the timing. s1-mini only ever receives short pieces of text. The library keeps the two together.
 
@@ -141,7 +141,35 @@ So I'm welcome back to the show. Today we are talking about a local transcriptio
 
 The stutter is gone, "dot net" became `.NET`, the self-correction resolved to Friday, and "ten thirty" became `10:30`. Note the `So I'm welcome back`: that mistake came from Whisper Tiny's transcription, and s1-mini cleans text, it does not fix words the speech model got wrong. A bigger Whisper model helps there, at the cost of keeping fewer fillers for s1-mini to clean.
 
-Also note that this short clip produced a single segment. A real podcast produces many, one cue per segment, and the cue length follows Whisper's segmentation.
+This short clip produced a single segment. It did not establish complete-podcast handling or accurate acoustic timing: Whisper 0.9.0 preprocesses at most 30 seconds per call and can return a full-duration fallback segment. The updated repository sample uses explicit windows to process long recordings. The compact one-file example above is only suitable for a short WAV, not a complete podcast.
+
+## Real Spanish podcasts need a different path
+
+The updated [`PodcastToSrt` sample](../../src/samples/PodcastToSrt/README.md) includes two complete NTN 459 recordings: voice-only `Recording.m4a` and edited `ntn459.mp3`, with music. These replace the synthetic clip as the real-audio evaluation fixtures, not as automated unit-test inputs.
+
+The original sample selected `whisper-tiny.en`, an **English-only** model. Spanish needs a multilingual model such as `whisper-base` or `whisper-small`, without the `.en` suffix:
+
+```powershell
+dotnet run --project src\samples\PodcastToSrt -- `
+  src\samples\PodcastToSrt\assets\ntn459\Recording.m4a `
+  artifacts\podcast\voice-es.srt --model whisper-base --language es
+
+dotnet run --project src\samples\PodcastToSrt -- `
+  src\samples\PodcastToSrt\assets\ntn459\ntn459.mp3 `
+  artifacts\podcast\edited-es.vtt --model whisper-small --language es --vtt
+```
+
+**s1-mini v1 is English-only too.** Spanish is preserved without cleanup by default. This separates two questions: how well Whisper recognizes Spanish, and whether normalization preserves that transcription. Changing the cleanup prompt does not make s1-mini a supported Spanish model.
+
+The sample also offers `--language auto`, but the pinned Whisper package does not return reliable detected-language metadata. That mode is explicitly labeled unconfirmed and skips cleanup. In the tested excerpt it generated a repeated “Commission” loop rather than a usable transcript. Prefer an explicit `--language es` for these recordings.
+
+To intentionally produce English subtitles from Spanish audio, add `--translate`. Whisper translates, then s1-mini cleans the English result. To compare unsupported Spanish cleanup, opt into `--cleanup experimental`. Both modes retain the pre-cleanup subtitle file for inspection.
+
+For compressed and long recordings, the sample uses FFmpeg and non-overlapping windows of at most 25 seconds, retaining original offsets and silence. JSON reports distinguish possible full-window fallback timings from timestamp spans. A tested, dependency-specific byte-decoding adapter also fixes the Spanish accent encoding omitted by Whisper 0.9.0; it does not improve speech recognition.
+
+The [sample README](../../src/samples/PodcastToSrt/README.md) documents the opt-in comparison commands and limitations. Music, technical names, sentence boundaries and late-episode coverage need review; valid SRT syntax alone is not a quality benchmark.
+
+The [real-audio evaluation](../../src/samples/PodcastToSrt/evaluation-results.md) processed the complete voice recording into 59 cues and the edited episode into 61 cues, reaching both decoded ends. All cues were coarse full-window spans, so this proves full-file processing, not accurate speech alignment. Spanish technical names still need review, and no human-scored WER/CER is claimed.
 
 ## WebVTT works the same way
 
@@ -177,7 +205,7 @@ The parser and writer are plain code, so the timestamp guarantees are checked wi
 ## Known limitations
 
 - **Cues are cleaned one at a time.** The model is stateless, so it never sees neighboring cues. When a segment ends mid-sentence, punctuation and capitalization are less accurate than on full paragraphs. A future version could merge segments into sentences, clean them, and redistribute the text across the original time ranges.
-- **Timing is segment-level.** Once fillers and self-corrections are removed, word counts change, so word-level timing no longer lines up. Segment-level timing stays accurate, which is what subtitles need.
+- **Timing needs validation.** Cleanup preserves numeric timing values, not independently verified alignment. Whisper may return native spans or full-window fallback timing. Removing words does not create word-level alignment; coarse full-window cues are not production-ready subtitle segmentation.
 - **Transcription errors stay.** s1-mini normalizes text. It does not correct words Whisper misheard.
 
 ## Links

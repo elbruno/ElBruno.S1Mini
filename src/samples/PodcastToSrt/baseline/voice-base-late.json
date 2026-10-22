@@ -1,0 +1,44 @@
+{
+  "input": "Recording.m4a",
+  "model": "whisper-base",
+  "language": "es",
+  "Translate": false,
+  "cleanup": "Off",
+  "appliedCleanup": false,
+  "sourceOffsetSeconds": 1320,
+  "audioSeconds": 50.0000625,
+  "processedSeconds": 50.0000625,
+  "complete": true,
+  "elapsedSeconds": 19.4010605,
+  "whisperPackageVersion": "0.9.0",
+  "whisperAssemblyVersion": "0.8.0.0",
+  "byteLevelDecodingAdapter": true,
+  "framework": ".NET 8.0.32",
+  "processorCount": 32,
+  "windows": [
+    {
+      "offsetSeconds": 1320,
+      "durationSeconds": 24.94,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "punto es m\u00E1s innovaci\u00F3n. Siempre cuando hay innovaci\u00F3n en este tipo de arquitecturas vamos a tener tecnolog\u00EDas que avanzan m\u00E1s r\u00E1pido. As\u00ED que vamos a tener aqu\u00ED. Yo creo que va a ser un a\u00F1o lindo. Mira c\u00F3mo empezamos con un bombazo. La idea no es algo que est\u00E1 por verir, est\u00E1 aqu\u00ED ahora y va a una velocidad brutal. Y, eh, DeepSix el Paper DMHC son solamente una se\u00F1al de que esto no se acaba, esto sigue.",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1344.94,
+      "durationSeconds": 19.1400625,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Y que bueno, mientras pase todo esto, vamos a tener cada vez mejores juguetes, como digo yo, para aprender a entrenar y dem\u00E1s. Si ya hay que enleg\u00FAsta a leer este tipo de cosas, vamos a... Dejen un vistazo al paper, porque es impresionante lo que ha puesto esta gente, \u00BFno? Hay un punto aqu\u00ED que alguien lo dejo preguntaba, \u00BFqu\u00E9 pasa con la Zilaz y est\u00E1 cerca o no?",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 1364.0800625,
+      "durationSeconds": 5.92,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "tengo unas notas, voy a hacer un episodio sobre lo que yo pienso a la banda sobre la Azi, pero lo dejo as\u00ED, no voy a sacar",
+      "segmentCount": 1
+    }
+  ]
+}

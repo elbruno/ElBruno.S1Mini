@@ -1,0 +1,52 @@
+{
+  "input": "ntn459.mp3",
+  "model": "whisper-base",
+  "language": "es",
+  "Translate": false,
+  "cleanup": "Off",
+  "appliedCleanup": false,
+  "sourceOffsetSeconds": 0,
+  "audioSeconds": 90,
+  "processedSeconds": 90,
+  "complete": true,
+  "elapsedSeconds": 10.390616,
+  "whisperPackageVersion": "0.9.0",
+  "whisperAssemblyVersion": "0.8.0.0",
+  "byteLevelDecodingAdapter": true,
+  "framework": ".NET 8.0.32",
+  "processorCount": 32,
+  "windows": [
+    {
+      "offsetSeconds": 0,
+      "durationSeconds": 24.02,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "Buenas, buenas, bienvenidos a otro episodio de No Tiene nombre feliz a\u00F1o nuevo estamos en el 2026 y si pensaba que iba a empezar a ca\u00F1o de una forma tranquilita repasando, festejando",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 24.02,
+      "durationSeconds": 24.62,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "el 31 de diciembre de los amigos de DeepSick han soltado una bomba de las grandes, de las grandes similes que se hablamos bastante de DeepSick por aqu\u00ED y ha hecho que se revolucione todo. As\u00ED que a ver c\u00F3mo empezamos al 2026, porque bueno, a ver muy empezados a hablar de DeepSick varias veces busquenlo por ah\u00ED, ya tendr\u00EDa que hacerme una AI que os ayuda a buscar, a ver cuando hubo un hablado de, bueno, voy a hacerles, voy a agregar el notinombre.com un buscador con una AI inteligente que te diga cuando hablo de algunos",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 48.64,
+      "durationSeconds": 23.48,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "m\u00E1s. Me lo apunto como un pet project para este a\u00F1o. Mientras tanto, DeepSick, hagamos memoria. Si reci\u00E9n sos nuevo por aqu\u00ED y dem\u00E1s, DeepSick es un estar tar china que el a\u00F1o pasado o el otro, si el a\u00F1o pasado, ahora que tenemos el 26 de a\u00F1o pasado, caus\u00F3 un terremoto en la industria tecnol\u00F3gica porque lanzaron un modelo que era el R1 que compet\u00EDa mano a mano con g\u00E9nero de poca GPT4 y",
+      "segmentCount": 1
+    },
+    {
+      "offsetSeconds": 72.12,
+      "durationSeconds": 17.88,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "clau sonet de Android, pero lo interesante es que con una fracci\u00F3n del costo. Seg\u00FAn los n\u00FAmeros que los compartieron, gastaron entre 5 a 6 millones de d\u00F3lares para entrenar el modelo y por otro lado la competencia, por ejemplo, opening aigast\u00F3 m\u00E1s de 100 millones en entrenar a gpt4. La diferencia",
+      "segmentCount": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:24,020
+Buenas, buenas, bienvenidos a otro episodio de No Tiene nombre feliz año nuevo estamos en el 2026 y si pensaba que iba a empezar a caño de una forma tranquilita repasando, festejando
+
+2
+00:00:24,020 --> 00:00:48,640
+el 31 de diciembre de los amigos de DeepSick han soltado una bomba de las grandes, de las grandes similes que se hablamos bastante de DeepSick por aquí y ha hecho que se revolucione todo. Así que a ver cómo empezamos al 2026, porque bueno, a ver muy empezados a hablar de DeepSick varias veces busquenlo por ahí, ya tendría que hacerme una AI que os ayuda a buscar, a ver cuando hubo un hablado de, bueno, voy a hacerles, voy a agregar el notinombre.com un buscador con una AI inteligente que te diga cuando hablo de algunos
+
+3
+00:00:48,640 --> 00:01:12,120
+más. Me lo apunto como un pet project para este año. Mientras tanto, DeepSick, hagamos memoria. Si recién sos nuevo por aquí y demás, DeepSick es un estar tar china que el año pasado o el otro, si el año pasado, ahora que tenemos el 26 de año pasado, causó un terremoto en la industria tecnológica porque lanzaron un modelo que era el R1 que competía mano a mano con género de poca GPT4 y
+
+4
+00:01:12,120 --> 00:01:30,000
+clau sonet de Android, pero lo interesante es que con una fracción del costo. Según los números que los compartieron, gastaron entre 5 a 6 millones de dólares para entrenar el modelo y por otro lado la competencia, por ejemplo, opening aigastó más de 100 millones en entrenar a gpt4. La diferencia
+

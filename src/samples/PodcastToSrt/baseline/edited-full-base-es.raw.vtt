@@ -1,0 +1,185 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:24.020
+Buenas, buenas, bienvenidos a otro episodio de No Tiene nombre feliz año nuevo estamos en el 2026 y si pensaba que iba a empezar a caño de una forma tranquilita repasando, festejando
+
+00:00:24.020 --> 00:00:48.640
+el 31 de diciembre de los amigos de DeepSick han soltado una bomba de las grandes, de las grandes similes que se hablamos bastante de DeepSick por aquí y ha hecho que se revolucione todo. Así que a ver cómo empezamos al 2026, porque bueno, a ver muy empezados a hablar de DeepSick varias veces busquenlo por ahí, ya tendría que hacerme una AI que os ayuda a buscar, a ver cuando hubo un hablado de, bueno, voy a hacerles, voy a agregar el notinombre.com un buscador con una AI inteligente que te diga cuando hablo de algunos
+
+00:00:48.640 --> 00:01:12.120
+más. Me lo apunto como un pet project para este año. Mientras tanto, DeepSick, hagamos memoria. Si recién sos nuevo por aquí y demás, DeepSick es un estar tar china que el año pasado o el otro, si el año pasado, ahora que tenemos el 26 de año pasado, causó un terremoto en la industria tecnológica porque lanzaron un modelo que era el R1 que competía mano a mano con género de poca GPT4 y
+
+00:01:12.120 --> 00:01:36.240
+clau sonet de Antropi. Pero lo interesante es que con una fracción del costo. Según los números que los compartieron, gastaron entre 5 a 6 millones de dólares para entrenar el modelo y por otro lado la competencia, por ejemplo, opening a gastó más de 100 millones en entrenar a GPT4. La diferencia es brutal, no? Es comparar el presupuesto, no sé, es como comparar el presupuesto de una película indie con el de Avengers,
+
+00:01:36.240 --> 00:01:59.940
+pero la película india es buenísima, es buenísima y hace que compita con los de Marvel. Aquí la clave estuvo en la eficiencia algoritmica. ¿Por qué? Deep Six usó chips a 800 envidia que son una versión mucho menos potente pero después del ban que le puso Estados Unidos, a China es el que China puede importar hoy. Entonces como tiene
+
+00:01:59.940 --> 00:02:23.080
+es el único, la única GPU que pudieron importar para empezar a trabajar y en lugar de quejarse la cultura de nuestros amigos dijo bueno a ver si no tenemos los mejores chips hagamos mejores algoritmos y pun, funciono, el modelo que del que estábamos hablando el R1 en ese momento usaba razonamiento similar al R1 de esa época de OpenAI y demostró en esos días
+
+00:02:23.080 --> 00:02:48.060
+que se podía hacer inteligencia artificial sin gastar fortunas en hardware. El modelo de código abierto bajo licencia mid y también gracias a esto cualquiera podía usarlo, modificarlo e inclusive comercializarlo. Te conmistudos con licencia aquí pero creo que también hay productos que estaban basados. ¿No? Entonces, ¿qué pasa? El saltamos un año, saltamos al 31 de diciembre, avance rápido esta semana y
+
+00:02:48.060 --> 00:03:12.060
+mientras todo estábamos preparándose para las fiestas bien a Deepseek y suelta una bomba. Porque publicaron un paper que se llama Manifold Constraint Hyper Connections o MHC para los amigos. Voy a empezar a decirle MHC. Y este no es un paper cualquiera. Está coescrito por el propio CEO y fundador de Deepseek, LionWenFeng y lo subió él personalmente a AR-XGIV.
+
+00:03:12.060 --> 00:03:37.060
+que son de tanto los paper de Intel que se reficia al investigación, etc. Cuando el CEO de una presó sube directamente en la investigación se mete directamente en la investigación técnica sube el mismo el paper y demás, algo pasa. ¿Y qué propone este paper? Básicamente es una nueva forma de estructurar red en neuronales que las hace más estables, más escalables y más eficientes durante el tren en trenamiento.
+
+00:03:37.060 --> 00:04:01.580
+y lo importante es seguir andará el línea de DeepSick con un costo computacional mínimo, mínimo adicional mínimo. Entonces, voy a tratar de explicarlo sin entrar demasiado en detalles técnicos porque si no esto va a ser una clase de álgebra, nadie quiere eso un viernes, pero vamos a empezar a explicar que son cosas como las conexiones residuales. Tiene un poco para atrás, y algún moncro que en algún episodio lo he hecho, sino busque
+
+00:04:01.580 --> 00:04:25.500
+en algún vídeo miedo donde hablo cómo funcionan los transformers y demás. La red en neuronales modernas, especialmente los transformers, que son la base de los modelos como los de GPT o los modelos de cloud, funcionan con algo que se llama conexiones residuales. Esto fue inventado allá por el 2015, creo, 2015, 2016, porque el 2017 salió al paper de los transformers, pero en el 2015 más o menos lo que básicamente
+
+00:04:25.500 --> 00:04:50.480
+permitía que las redes sean más profundas que sean más inteligentes por eso de alguna manera sin que se pierde la información o que se distorsione demasiado mientras pasa de una capa a la otra recordemos que las redes unijeronales son paso de información entre diferentes capas con decisiones en cada una de las capas ¿no? acá se podría pensar esto como si fuera el juego del teléfono descompuesto donde al final del juego el mensaje sigue siendo correcto porque porque
+
+00:04:50.480 --> 00:05:14.600
+que hay trucos o atajos, no sé cuál es la mejor forma para traducir esto, que permiten que la información original se percibe mejor. El problema que tenemos hoy con estos modelos grandes, con los transformes, con las arquitecturas de Vib learning de las redes neuronales, es que a medida que los modelos se en más grandes y más complejos, estas conexiones residuales empiezan a mostrar limitaciones. Se pueden volver inestables,
+
+00:05:14.600 --> 00:05:38.300
+imaginado durante el entrenamiento y el modelo puede explotarlo, puede colapsar matemáticamente para hacer una manera. Es como si, no sé, alguna vez alguien lo explicó y me gustó, esto es como si construyeron un edificio muy, muy, muy alto, pero los materiales no fueron disineados para soportar tanto peso, es de un momento que colapsa. En septiembre de año pasado unos investigadores propusieron algo llamado Hyper Connections
+
+00:05:38.300 --> 00:06:02.539
+que básicamente expande este concepto de conexiones residuales para permitir que puedan pasar más información, más información entre las capas. Esto era bastante prometedor, pero tenía algunos problemas. Era muy inestable, usaba mucha memoria y era cuando los remodenos eran realmente grandes, escalaban mal, era bastante poco fiable. Entonces, llega, literalmente dos días llega la gente
+
+00:06:02.540 --> 00:06:26.320
+de DeepSick y Scentra MHC. Vamos a pensar cómo es la solución que proponen básicamente pensar que tenés una autopista con muchos carnes donde pasan los autos, los pasan los coches y lo que hacen las hiper conexions es abrir más carriles para que en la autopista fluye más información, pero no hay control de tráfico. Los autos pueden fluir libremente pero a veces cuando
+
+00:06:26.320 --> 00:06:49.980
+pasaba un problema, se generan empatosamientos, accidentes, etc. Lo que Dipsit propone con imétese es agregar restricciones matemáticas en esta autopista que van a mantener un flujo de información constante y va a estar bajo control. Usan algo que se llama Manifold, no sé cómo se trauce Manifold, no encontré ninguna palabra que me guste, pero básicamente pensaba que es como un artefacto matemático que puede ser
+
+00:06:49.980 --> 00:07:13.740
+tan simple como un punto o tan complejo como una arquitectura en diferentes dimensiones para controlar el flujo de información. Entonces lo que hace MHC es proyectar las conexiones sobre este manifold y mantienen la estabilidad mientras viajan las capas del modelo, o sea que los gradientes que están ahí, tanto de que no se puede explicar, lo que hace en Christiano, básicamente hace que el entrenamiento sea más estable sin sacrificar el rendimiento.
+
+00:07:13.740 --> 00:07:38.100
+los resultados por lo que dice el paper estos son impresionantes porque DeepSick probó MCHC en modelos de 3000 millones 9000 millones y 27000 millones de parámetros y encontraron mejoras con sintentes en los benchmark especialmente en las tareas de razonamiento, recordemos que esto es cuando el modelo usa varios pasos para llegar de A a B y la parte importante que todo esto lo hacen solo con un aumento del CIISP
+
+00:07:38.100 --> 00:08:01.179
+punto 7% en tiempo de entrenamiento. Que esto es brutal, es decir, baja tener una estabilidad más grande, entrenando un poco más, pero la calidad de los modios grande va a ser brutal, ¿no? De nuevo, tratando de poner este perfectivo, porque me tienen tiempo de hablar de nubes y demás así, están logrando mod... modelos mejores, mejores modelos, y más estables con uno vergea mínimo a nivel de gasto computacional, ¿no? Es como mejorar.
+
+00:08:01.180 --> 00:08:25.700
+el rendimiento del motor de tu auto y que consuma solamente un poquito más de gasolina, pero ahora va 20% más rápido y es mucho más fiable. Y esto, hoy por hoy, es un game changer, porque vamos a ver un poco de la situación actual. El timing, ¿no? Los Papers técnicos que ha sacado Deepseek siempre han sido buenos predictores de lo que viene después. Antes de el asamiento del R1,
+
+00:08:25.700 --> 00:08:49.500
+publica una investigación similar. Antes del V3, que también es otro modelo muy famoso que tienen, también. Este patrón sugiere que están trabajando en algo grande, probablemente su próximo modelo, flagship, que muchos están especulando que va a ser el R2. Segundo, esto no es solamente una mejor incremental, es un cambio fundamental en cómo se pueden estructurar las redes neuronales. Deepseek demuestra
+
+00:08:49.500 --> 00:09:13.000
+una vez más que todavía hay mucho margen para la innovación en lo que es la arquitectura de redes neuronales. No sólo no todo estirar GPUs y lo a lo bestia y comprar en VD y cosas así, se puede también ganar más performance cuando, cuando se invierte en mejores modelos de arquitectura. Y esto es especialmente importante en el contexto.
+
+00:09:13.000 --> 00:09:37.300
+geopolítico, sí, toca hablar un poquito de China, porque China enfrenta restricciones series en el acceso a los chip más avanzados, lo que comentamos al principio, entonces, porque las restricciones que le pudo estar unido, no en vídeo no puede vender su mejor ejepejo allá, por ejemplo, solamente pueden exportarlos, H800, pero no los H100, y los H800 son unas versiones limitadas, lo que hace DeepSync es convierta
+
+00:09:37.300 --> 00:10:01.820
+esta limitación en una venta. En lugar de competir en una carrera de hardware que no van a poder ganar, están ganando ineficiencia algoritmica, están demostrando que con mejores almor Commission, software, maje de dijeron y arquitecturas innovadoras, se pueden lograr muy buenos resultados, comparar a los top-tier de mejor modelos con muchos menos recursos. Pero, también hay una pata para tener en cuenta aquí.
+
+00:10:01.820 --> 00:10:25.580
+Lo haremos el otro día, China ya está empezando a tener sus propios diseñadores de chips, China ya, de decir, este año va a ser el año donde Nvidia va a seguir siendo el líder, tal vez, pero va a tener otras cosas, porque Huawei, nombre que a muchos sonará, también está metiendo el juego con sus chips a 60. Estos chips no son tan potentes como los H100 Nvidia para entrenar modelos,
+
+00:10:25.580 --> 00:10:49.180
+Puedes básicamente, han hecho unos 20 más y unas comparaciones y dicen que el accent 910 puede ofrecer aproximadamente el 60% del rendimiento de 1 H100 para inferencia. Pero, pero que inferencia es cuando el modelo se está entrenado y genera respuestas. Pero hay 60% en un chip de tecnología china que propiedad china y que funciona y demás ahí.
+
+00:10:49.179 --> 00:11:12.259
+Es algo a tener en cuenta y la inferencia el uso de los modelos va a ser cada vez más importantes. Barclay estima que para este año el 70% de la demanda de cómputo, la inteligencia artificial vendrá de inferencia no de entrenamiento. El 70% del uso de GPU, el 70% de dibujos de cómputo de AI este año va a ser para usarla no para entrenarla. Entonces China o su chipdomeste
+
+00:11:12.260 --> 00:11:36.999
+utilizado para interferencia y modelos eficientes como el de Deepseek podría estar muy bien posicionado. Y cuando empezás a ver esto en el parónaba más rápido del inteligencia artificial del 26 va a haber para y cosas de la en cuenta por un lado va a haber una competencia más más intensa. Openerayen ya admitió que la competencia de modelos de código abiertos chinos, incluyendo Deepseek, influyó en su decisión de sacar el jepe
+
+00:11:37.000 --> 00:12:01.600
+que te digo SS, sus propios modelos de código abierto. Samarmald dijo literalmente que en las notas, está claro que si no lo hacíamos nosotros, el mundo iba a estar más dormente construido sobre modelos chinos de código abierto. Y ojo, acá, Alman le tiró un palo sin mencionar a lo que yo considero que son los líderes en el open source que la gente demeta con su modelo en alma. Ya hablamos de dos también la semana pasada. Esto es enorme.
+
+00:12:01.600 --> 00:12:26.580
+significa que los gigantes de Estados Unidos están reaccionando a lo que está pasando en China. Habimos también lo que hizo meta cuando comprobar. Ya no es una competencia que donde sale todo de Silicon Valley sino que China está forzando a los laboratorios occidentales a acelerar el juego. Otro punto importante, segundo punto es, vamos, creo yo que va a haber un cambio muy grande en lo que significa la ventaja competitiva
+
+00:12:26.580 --> 00:12:50.500
+en inteligencia artificial. Tradicionalmente, la ventaja venía de tener más GPUs, más datos, más dinero. Pero DeepSick está demostrando que las inversiones y la innovaciones en arquitecturas de redes neuronales, foco en eficiencia, pueden ser igual de valiosas sino más. Para estar tarea de esas pequeñas, esto es una noticia excelente, significa que no necesita ser open-air.
+
+00:12:50.500 --> 00:13:14.280
+con miles de millones de dólares en financiamiento y con tus planes de financieros que son una locura para poder hacer contribuciones al campo. Se puede competir con inteligencia y innovación. Y el tercer punto a tener en cuenta es que los modelos de código a biotobana se irán ganando más y más tracción. Lip-Dip-Sick libera los modelos de la licencia de MIT, lo que los hace completo
+
+00:13:14.280 --> 00:13:39.000
+comercializable. De nuevo, yo tengo mis dudas acá pero creo que sí, en el mundo ya operadores de telecomunicaciones en China están integrando tipsy, Nissan, VyV, Gili, China Mobile, todos se están subiendo al tren. Y un cuarto punto, un bueno que tengo aquí que me ha soltado el amigo Cloud es que los controles de exportación de chips están forzando a China hacia la autosuficiencia tecnológica más rápido
+
+00:13:39.000 --> 00:14:03.400
+de lo que nadie esperaba. El presidente chino, Xi Jinping, ha reiterado varias veces, varias veces, varias, casi muchas veces, el llamado a lo que ellos dicen la autosuficiencia en inteligencia artificial. Por un lado Huawei está estocando chipsacen, alivaba a esta espándalo su familia de modelos Cuen, si sumas todo esto te das cuenta que el ecosistema chino se está fortaleciendo. Pero bueno, ya me fio un poco con las ramas,
+
+00:14:03.400 --> 00:14:27.740
+parte técnica al lado técnico fascinante de este país ¿no? Lo que hizo... a ver, hay algo que para mí es súper elegante, súper bonito en lo que hizo DeepSy con MHC. El problema fundamental con la HyperConnection era que las originales no, era con que comprometían lo que se llama el mapeo de identidad ¿no? es cuando pasan datos de un punto a otro entre las creaciones residuales.
+
+00:14:27.740 --> 00:14:52.560
+Esta propiedad, el mapeoletidad es lo que permite que las redes neuronales, las Deep Learning Network, funcionen bien, porque garantizan que la señal se pasa sin demasiada distorsión. Cuando las HC, las Hyper Connection, mejoraban, trabajaban, básicamente lo que hacías era como abril las comportas de una presa, más agua fluye pero pierdes control. Cuando llega el MHC, lo dipsycte,
+
+00:14:52.560 --> 00:15:17.040
+es impor estas restricciones y hace que todo esto funciona el flujo es pandigo en la estabilidad todo se preserva y la vez que es aquí es que lo lindo de esta parte es que no solamente están limitando el flujo sino que están encontrando la forma óptima de expandir los interior del control es como tener volendo el autopista, el ejemplo autopista, como tener más carriles que tenés más carriles, van más autos, van más rápidos
+
+00:15:17.040 --> 00:15:41.840
+pero tiene sistemas de controles de trafico inteligente que previenen los accidentes y implementaron esto que en lugar de utilizar más memoria o tiempo de cómbuto básicamente MHC logró los beneficios con estas por lo decirlo una manera de estos objetos matemáticos es los artilugios matemáticos artipesios como bien yo mi amigo y te ya pero con un costo mínimo mínimo en un modelo de 27 mil millones de parámetros
+
+00:15:41.840 --> 00:16:04.860
+MHC lo bruna mejora de 0.021 en la pérdida en el teramiento comparado con técnicas anteriores manteniendo el incremento del 6.7% en el tiempo de el entrenamiento. Esto es Bruta. Entonces, ¿qué vamos a poder esperar para este año? Primero, yo creo que es casi seguro que en los próximos días vamos a ver otro gran modelo de Deepseek probablemente en el R2, por lo que comentaba antes que cada vez que sacan un paper
+
+00:16:04.860 --> 00:16:27.960
+de investigación al poco tiempo parece un modelo de los buenos. Si R2 y Compora MHC a gran escala podríamos estar viviendo otro gran momento de Ypsik, si me era el que vimos el año pasado cuando R1 sacuí la industria. Modelo que compite con los modelos frontiers de OpenAI, Antropik, etc. pero construido con una fracción del costo y sobre principios arquitecturas que son realmente
+
+00:16:27.960 --> 00:16:52.920
+y no valores. Seguros, segunda parte que a tener en cuenta. Otros laboratorios van a copiar estas técnicas rápidamente. Hay una analista de Omnia que se llama Lean Su-Ju, que predijo que la innovación de Deepseek, van a tener un efecto dominó en toda la industria con sus laprivales, desarrodando sus propias versiones del enfoque, pero que por ejemplo los amigos de Mistral en Europa hagan algo parecido. La disposición
+
+00:16:52.920 --> 00:17:16.240
+Esto que se dipcic de compartir su investigación, es una demostración de confianza como un estrategia inteligente. Están diciendo, ¿miren? Incluso y saben, ¿cómo lo hacemos? Todavía podemos mantenernos adelante. Es una power move de las buenas. Hablarse de hablar de la competencia de Estados Unidos y China va a decidir creciendo a lo bestia, no sé qué pasará.
+
+00:17:16.240 --> 00:17:40.840
+puede ser que por un lado está ogunido en dures camastro, había los controles de exportación de chip, pero... ¡Hey! Vamos a ver qué pasa ahí. Sin embargo, paradogicamente estas restricciones hacen que se aceleren innovación China en lugar a frenarla y además como los chinos abren lo que... lo que a gente de DeepSick abrió lo que les hicieron los pensóros, lo que están haciendo, así que otros laboratorios de cualquier otro lugar del mundo también tengan acceso a esto, ¿no?
+
+00:17:40.840 --> 00:18:04.480
+El año pasado, leán Gwen Fen, el CEO, dijo, el dinero nunca ha sido el problema para nosotros. Las prohibiciones en el videochips son el problema. Y están encontrando formas creativas de trabajar. Vamos a ver también un cambio en cómo creó Zoki, cómo progresalear. Durante años, el modelo el mal trascido más grande, mejor, más data.
+
+00:18:04.480 --> 00:18:28.440
+mejor, más GPUs mejor, saber escalar, escalar, escalar. Pero la dimensión de la eficiencia está teniendo cada vez más importancia, que también puedes utilizar los recursos que tienes y en un mundo donde la capacidad de cómputo se está volviendo cada vez más cara a los que pasen con las memorias con las GPU, etcétera, este concepto de eficiencia puede ser una ventaja competitiva enorme en estos días. Así que
+
+00:18:28.440 --> 00:18:52.060
+Vamos a ver qué pasa aquí. También no son de todo de rosa, hay preguntas importantes para que se pueden responder. ¿Qué también escala MHC más allá de los 27.000 millones de parámetros? ¿Qué es lo que han dado? Los experimentos de DeepSync fueron el modelo real de activamente pequeño comparado con los modelos actuales, los modelos Frontier que tienen cientos de miles de parámetros,
+
+00:18:52.060 --> 00:19:16.180
+habría que ver si las ventajas quedan a MHC se mantienen en este escala. Segundo, Cuevo Funciona MHC con modelos que son multimodales, que no solamente trabajan con textos, sino también con imágenes, video, audio. Por lo que vemos hasta ahora, lo que está en este PIPER le ha mayorido de la investigación hasta ahora sólo ha sido en modelos del lenguaje, texto puro. Está también hay una
+
+00:19:16.180 --> 00:19:40.200
+de gréis, de área gris donde nadie se sabe si realmente Dipsy que entrenó el R1 con los recursos que dice, como una especie de septicismo en la comunidad sobre los costos, realmente gastaron 5 millones o gastaron mucho más. Algunos analistas argumentan que las cifras publicadas no incluyen el hardware, la infraestructura y los costos de imas B que podrían llevar la inversión total de 100 millones.
+
+00:19:40.200 --> 00:20:03.680
+También está la controversia sobre CD-C, justo un solo en la técnica de distillation, la garro modelo de OPEREA para entrenar su modelo, su propios modelos. D distillation es cuando usas un modelo grande para entrenar uno más pequeño y parece, parece hay evidencia que algunos modelos de DCP a veces generan texto que sugieren que fueron entrenados por OPEREA. Así que bueno hay preguntas complicadas en ese aspecto de propiedad intelectual.
+
+00:20:03.680 --> 00:20:26.759
+actual, ética, etcétera, justo utilizar auppos de modelos cerrados para entregar modelos abiertos. Los tribunales chinos probablemente dirían que sí, pero no sé, pero es una día creí, ¿no? Y también el último punto es la cuestión geopolítica. Laía se volve más y más integral en cuestiones globales de economía, seguridad nacional, etcétera.
+
+00:20:26.760 --> 00:20:51.220
+de la senso de estas higias chinas a la relación del estado unido de chinas va a haber una guerra fría tecnológica de AI yo creo que sí porque parece por lo que vemos hoy por ejemplo con la compra que hizo meta hace dos días y demás así hay preocupaciones en el punto de vista de Estados Unidos de cómo crece la AI en China pero bueno, muchos en la comunidad científica ven con buenos ojos a la apertura y transparencia de la investigación china
+
+00:20:51.220 --> 00:21:15.260
+muchas cosas de la gente, ¿no? Y una cosa que me he dado a la que la otra vez que yo creo que no es lo nombre es Ilián Wendfe, el fundador de zip y no es el típico CEO Tech, es un investigador, el tipo es un risarcher, un tipo de que investiga y que se involucra directamente del trabajo técnico. Tiene una cultura de empresa, parece, parece, que también es única, ¿no? Exemplados, hablan de
+
+00:21:15.260 --> 00:21:40.260
+tener acceso a recursos computacionales abundantes, libertas para experimentar. Voy a intentar encontrar más información sobre el cobo, funciona DeepSync para contar al respecto porque parece que es una empresa muy muy interesante, recluta en los investigadores de las mejores universidades chinas, contratas de fuera, campos de gente sobre cincenas de la computación. Es una cosa muy muy rara, muy muy linda.
+
+00:21:40.260 --> 00:22:04.240
+algo tiene si tanto ruido hace ¿no? entonces, nosotros como solo finales, si, vamos a tener más Deepseek, vamos a tener otro modo de los chinos que van fundando muy bien competencia para GPT Cloud orzemini, siempre la competencia buenas para los unidores, segundo si esto funcione bien, los precios van a ser más bajos, vamos a ver qué tanto, que pasa ahí, las happy deep seek son siempre mucho, mucho más para estas que las de open AI,
+
+00:22:04.240 --> 00:22:28.700
+Así que si todo tiene que competir en precio, creo que todos ganamos y el tercer punto es más innovación. Siempre cuando hay innovación en este tipo de arquitecturas, vamos a tener tecnologías que avanzan más rápido. Así que vamos a tener aquí. Yo creo que va a ser un año lindo, mira cómo empezamos con un bombazo. La idea no es algo que está por verir, está aquí ahora y va a una velocidad brutal.
+
+00:22:28.700 --> 00:22:53.380
+DeepSiqui del Paper DMHC son solamente una señal de que esto no se acaba esto sigue y que bueno, mientras pase todo esto vamos a tener cada vez mejores juguetes como digo yo para aprender a entrenar y demás y si hay que le gusta leer este tipo de cosas, vamos a ver en un vistazo al Paper porque es impresionante lo que ha puesto esta gente ¿no? Hay un punto aquí que alguien en el otro día me preguntaba ¿qué pasa con la Zilagia?
+
+00:22:53.380 --> 00:23:17.580
+hacer que no tengo unas notas voy a hacer un episodio sobre lo que yo pienso a sobre la Azi, pero lo dejo así no voy a sacudarlo ahora, así que bueno, Deep 6 saco del tablero trabaja más, empezamos al 2026 con todo, no puedo hacer episodios contisto porque tanta info es imposible resumirla en 10 minutos, pero el proyecto que van a quedar episodio de 10 minutos a partir del que sigue. Seguramente la última predicción será que
+
+00:23:17.580 --> 00:23:41.380
+para mediarlo al vento de el 16, tendremos el R2 seguramente va a ser otro momento, wow, y cosas por el estilo, y si es gratis y funciona bien en el local, mucha gente va a estar muy muy muy muy contenta. Así que bueno, más info, el no tiene nombre.com, voy a ponerme como pet proye que el bot, inteligente ahí, nos vemos en la próxima, hasta luego, y de nuevo, feliz anáble.
+
+00:23:41.380 --> 00:24:02.047
+Si escuchas este podcast en e-box, te pedimos que le des me gusta. Si lo escuchas en otra plataforma, intenta contactar con nosotros en Twitter, en la cuenta a Roba el Bruno, para compartir tus opiniones. Y después de estos segundos extras, gracias por tu apoyo.
+
+00:24:02.047 --> 00:24:07.287
+y
+

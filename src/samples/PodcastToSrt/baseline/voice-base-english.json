@@ -1,0 +1,28 @@
+{
+  "input": "Recording.m4a",
+  "model": "whisper-base",
+  "language": "es",
+  "Translate": true,
+  "cleanup": "Auto",
+  "appliedCleanup": true,
+  "sourceOffsetSeconds": 60,
+  "audioSeconds": 25,
+  "processedSeconds": 25,
+  "complete": true,
+  "elapsedSeconds": 13.2223503,
+  "whisperPackageVersion": "0.9.0",
+  "whisperAssemblyVersion": "0.8.0.0",
+  "byteLevelDecodingAdapter": true,
+  "framework": ".NET 8.0.32",
+  "processorCount": 32,
+  "windows": [
+    {
+      "offsetSeconds": 60,
+      "durationSeconds": 25,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "with that gpt4 and the Anthropic Clouds. But the interesting thing is that with a cost fraction, according to the numbers that I shared, they spent between 5 to 6 million dollars to train the model and on the other hand, the competition, for example, they open and spend more than 100 million in training gpt4. The difference is brutal, right? It is to compare the performance, I don\u0027t know, it\u0027s like compared to the performance of a indie movie,",
+      "segmentCount": 1
+    }
+  ]
+}

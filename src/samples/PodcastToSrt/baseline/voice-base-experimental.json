@@ -1,0 +1,28 @@
+{
+  "input": "Recording.m4a",
+  "model": "whisper-base",
+  "language": "es",
+  "Translate": false,
+  "cleanup": "Experimental",
+  "appliedCleanup": true,
+  "sourceOffsetSeconds": 60,
+  "audioSeconds": 25,
+  "processedSeconds": 25,
+  "complete": true,
+  "elapsedSeconds": 14.4028715,
+  "whisperPackageVersion": "0.9.0",
+  "whisperAssemblyVersion": "0.8.0.0",
+  "byteLevelDecodingAdapter": true,
+  "framework": ".NET 8.0.32",
+  "processorCount": 32,
+  "windows": [
+    {
+      "offsetSeconds": 60,
+      "durationSeconds": 25,
+      "reportedLanguage": "es",
+      "timing": "full-window (may be backend fallback)",
+      "rawText": "con gn esa \u00E9poca gpt4 y cloudzone de antropi. Pero lo interesante es que con una fracci\u00F3n del costo. Seg\u00FAn los n\u00FAmeros que yo os compartieron, gastaron entre 5 a 6 millones de d\u00F3lares para entrenar el modelo y por otro lado la competencia por ejemplo, openen a gasto m\u00E1s de 100 millones en entrenar a gpt4. La diferencia es brutal, no? Es comparar el presupuesto, no s\u00E9, es como comparar el presupuesto de una pel\u00EDcula indico,",
+      "segmentCount": 1
+    }
+  ]
+}

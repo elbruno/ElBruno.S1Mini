@@ -1,0 +1,12 @@
+1
+00:01:00,000 --> 00:01:24,720
+con Génesis de época GPT4 y Cloud Sonet de Anthropin. Pero lo interesante es que con una fracción del costo, según los números que ellos compartieron, gastaron entre 5 a 6 millones de dólares para entrenar el modelo y por otro lado, la competencia, por ejemplo, OpenEI gastó más de 100 millones en entrenar a GPT4. La diferencia es brutal, ¿no? Es comparar el presupuesto, no sé, es como comparar el presupuesto de una película indie,
+
+2
+00:01:24,720 --> 00:01:44,560
+con el de Avengers, pero la película de hoy es buenísima. Es buenísima y hace que compita con los de Marvel. Aquí la clave estuvo en la eficiencia algorítmica. ¿Por qué? Deep Six usó chips H800 de Nvidia, que son una versión mucho, mucho menos potente, pero después del van que le puso Estados Unidos
+
+3
+00:01:44,560 --> 00:01:50,000
+a China es el que China puede importar hoy. Entonces como tiene restricción
+

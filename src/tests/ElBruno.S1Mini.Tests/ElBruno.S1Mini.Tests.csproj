@@ -16,5 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ElBruno.S1Mini\ElBruno.S1Mini.csproj" />
+    <ProjectReference Include="..\..\samples\PodcastToSrt\PodcastToSrt.csproj" />
   </ItemGroup>
 </Project>
