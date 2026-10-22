@@ -57,6 +57,13 @@ var transcription = await whisper.TranscribeAsync("episode.wav");
 
 `transcription.Segments` is a list of `TranscriptionSegment` with `Start`, `End` (both `TimeSpan`) and `Text`.
 
+The snippets below show an **illustrative progression** for the synthetic clip from the real-run example. They explain the shape of each result; Whisper's exact transcript and segment boundaries can vary.
+
+```text
+[00:00:00.000 - 00:00:11.452]
+So I'm welcome back to the the show. Today we are talking about, uh, local transcription in dot net. We will meet on Thursday no wait Friday at ten thirty.
+```
+
 ## Step 2: turn the segments into subtitle cues
 
 `SubtitleCue.FromTimes` formats the timing line for you (`00:00:01,000` for SRT, `00:00:01.000` for WebVTT):
@@ -75,6 +82,14 @@ var rawSrt = SubtitleParser.Write(rawCues, format);
 
 At this point you already have a valid, timestamped, but still messy subtitle file.
 
+For example, the same segment is now an SRT cue. The text is still uncleaned, but its timing is ready to pass through unchanged:
+
+```text
+1
+00:00:00,000 --> 00:00:11,452
+So I'm welcome back to the the show. Today we are talking about, uh, local transcription in dot net. We will meet on Thursday no wait Friday at ten thirty.
+```
+
 ## Step 3: clean the text, keep the timing
 
 ```csharp
@@ -86,6 +101,14 @@ await File.WriteAllTextAsync("episode.srt", cleaned);
 ```
 
 `NormalizeSubtitlesAsync` parses the cues, normalizes each cue's text, and writes the file back. Timing lines are carried through as raw strings, so they cannot drift. Markup tags such as `<i>` are stripped, multi-line cues are joined into one line, and cues that are pure filler stay in place with empty text (or are removed if you pass `dropEmptyCues: true`, in which case SRT is renumbered).
+
+After cleanup, the text is easier to read while the cue timing stays the same:
+
+```text
+1
+00:00:00,000 --> 00:00:11,452
+So I'm welcome back to the show. Today we are talking about a local transcription in .NET. We will meet on Friday at 10:30.
+```
 
 ## The whole thing in one file
 
