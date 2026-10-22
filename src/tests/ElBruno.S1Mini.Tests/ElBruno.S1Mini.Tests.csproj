@@ -15,6 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="..\..\samples\FoundryLocalSpeech\SpeechEvidence.cs" Link="FoundryLocalSpeech\SpeechEvidence.cs" />
+    <Compile Include="..\..\samples\FoundryLocalSpeech\WaveInput.cs" Link="FoundryLocalSpeech\WaveInput.cs" />
+    <Compile Include="..\..\samples\FoundryLocalSpeech\PcmStreaming.cs" Link="FoundryLocalSpeech\PcmStreaming.cs" />
     <ProjectReference Include="..\..\ElBruno.S1Mini\ElBruno.S1Mini.csproj" />
     <ProjectReference Include="..\..\samples\PodcastToSrt\PodcastToSrt.csproj" />
   </ItemGroup>

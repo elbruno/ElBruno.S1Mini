@@ -6,6 +6,7 @@
     <Project Path="src\tests\ElBruno.S1Mini.Tests\ElBruno.S1Mini.Tests.csproj" />
   </Folder>
   <Folder Name="/src/samples/">
+    <Project Path="src\samples\FoundryLocalSpeech\FoundryLocalSpeech.csproj" />
     <Project Path="src\samples\HelloS1Mini\HelloS1Mini.csproj" />
     <Project Path="src\samples\LiveMicTranscription\LiveMicTranscription.csproj" />
     <Project Path="src\samples\PodcastToSrt\PodcastToSrt.csproj" />

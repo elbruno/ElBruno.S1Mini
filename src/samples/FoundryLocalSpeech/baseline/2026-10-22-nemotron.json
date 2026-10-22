@@ -1,0 +1,1446 @@
+{
+  "evaluationDate": "2026-10-22",
+  "sdkSourceRevision": "1f0d8ffd3d54443e12230da051e0c63e75645356",
+  "inputMode": "incremental-pcm",
+  "pcmFormat": {
+    "encoding": "signed PCM16 little-endian",
+    "sampleRateHz": 16000,
+    "channels": 1,
+    "chunkBytes": 4096,
+    "maxQueuedChunks": 8,
+    "bufferedReplay": true
+  },
+  "api": {
+    "sdkPackage": "Microsoft.AI.Foundry.Local",
+    "sdkPackageVersion": "2.2.1",
+    "sdkAssemblyVersion": "2.2.1.0",
+    "audioMethods": [
+      "Microsoft.AI.Foundry.Local.Session SetOptions(Microsoft.AI.Foundry.Local.RequestOptions)",
+      "Microsoft.AI.Foundry.Local.Session SetStreaming(Boolean)",
+      "System.Threading.Tasks.Task`1[Microsoft.AI.Foundry.Local.Response] ProcessRequestAsync(Microsoft.AI.Foundry.Local.Request, System.Threading.CancellationToken)",
+      "Microsoft.AI.Foundry.Local.StreamingResponse ProcessStreamingRequestAsync(Microsoft.AI.Foundry.Local.Request, System.Threading.CancellationToken)",
+      "Void Dispose()"
+    ],
+    "responseProperties": [
+      "Text",
+      "Language",
+      "DurationMs",
+      "Segments",
+      "ItemType"
+    ],
+    "segmentProperties": [
+      "Kind",
+      "Text",
+      "StartTimeMs",
+      "EndTimeMs",
+      "UtteranceStart",
+      "Words",
+      "Language",
+      "ItemType"
+    ],
+    "framework": ".NET 8.0.32",
+    "os": "Microsoft Windows 10.0.26300",
+    "architecture": "X64",
+    "processorCount": 36
+  },
+  "models": [
+    {
+      "id": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+      "name": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu",
+      "version": 1,
+      "alias": "nemotron-speech-streaming-es-0.6b",
+      "displayName": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu",
+      "providerType": "FoundryLocal",
+      "uri": "azureml://registries/azureml/models/nemotron-speech-streaming-es-0.6b-ft-generic-cpu/versions/1",
+      "modelType": "ONNX",
+      "promptTemplate": null,
+      "publisher": "Microsoft",
+      "modelSettings": null,
+      "license": "MIT",
+      "licenseDescription": "This model is provided under the License Terms available at <https://github.com/microsoft/Foundry-Local/blob/main/licenses/nemotron-speech-streaming.md>.",
+      "cached": true,
+      "task": "automatic-speech-recognition",
+      "runtime": {
+        "deviceType": "CPU",
+        "executionProvider": "CPUExecutionProvider"
+      },
+      "fileSizeMb": 729,
+      "supportsToolCalling": null,
+      "maxOutputTokens": 2048,
+      "minFLVersion": "1.1.0",
+      "createdAt": 1778527282,
+      "contextLength": null,
+      "inputModalities": "audio",
+      "outputModalities": "text",
+      "capabilities": null
+    },
+    {
+      "id": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+      "name": "nemotron-3.5-asr-streaming-0.6b-generic-cpu",
+      "version": 3,
+      "alias": "nemotron-3.5-asr-streaming-0.6b",
+      "displayName": "nemotron-3.5-asr-streaming-0.6b-generic-cpu",
+      "providerType": "FoundryLocal",
+      "uri": "azureml://registries/azureml/models/nemotron-3.5-asr-streaming-0.6b-generic-cpu/versions/3",
+      "modelType": "ONNX",
+      "promptTemplate": null,
+      "publisher": "Microsoft",
+      "modelSettings": null,
+      "license": "MIT",
+      "licenseDescription": "This model is provided under the License Terms available at <https://github.com/microsoft/Foundry-Local/blob/main/licenses/nemotron-speech-streaming.md>.",
+      "cached": true,
+      "task": "automatic-speech-recognition",
+      "runtime": {
+        "deviceType": "CPU",
+        "executionProvider": "CPUExecutionProvider"
+      },
+      "fileSizeMb": 756,
+      "supportsToolCalling": null,
+      "maxOutputTokens": 2048,
+      "minFLVersion": "1.2.1",
+      "createdAt": 1780680475,
+      "contextLength": null,
+      "inputModalities": "audio",
+      "outputModalities": "text",
+      "capabilities": null
+    }
+  ],
+  "modelSources": [
+    "https://github.com/Azure/azureml-assets/blob/main/assets/models/foundrylocal/nemotron-speech-streaming-es-0.6b-ft-generic-cpu/description.md",
+    "https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b",
+    "https://github.com/microsoft/Foundry-Local/blob/1f0d8ffd3d54443e12230da051e0c63e75645356/sdk_v2/cpp/src/inferencing/generative/audio/audio_session.cc",
+    "https://github.com/microsoft/Foundry-Local/blob/1f0d8ffd3d54443e12230da051e0c63e75645356/sdk_v2/cpp/docs/SpeechOutputTypes.md"
+  ],
+  "upstreamNemotron35License": "OpenMDW-1.1",
+  "catalogLicenseDescriptionHttpStatusObserved": 404,
+  "matrix": [
+    {
+      "name": "nemotron-es-voice-final",
+      "preparation": {
+        "sourceFile": "Recording.m4a",
+        "sourceSha256": "8799BA4D6C18F918BA59C97380563BA34DBA0AACA59E2C8258D52858FEF2CF04",
+        "decodedSha256": "1F3CB4F1B8FE4F0A83A9575FA7B63555C14A13F97C4B4AF661BEE7F7F44F41BB",
+        "sourceOffsetSeconds": 60.0,
+        "requestedDurationSeconds": 25.0,
+        "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "modelId": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "language": "es",
+        "streaming": false,
+        "pcmStreaming": true,
+        "inputMode": "incremental-pcm",
+        "pcmChunkBytes": 4096,
+        "createdUtc": "2026-10-22T16:56:17.0040289-04:00",
+        "complete": true,
+        "backendExitCode": 2
+      },
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 60,
+        "decodedDurationSeconds": 25,
+        "inputSha256": "1F3CB4F1B8FE4F0A83A9575FA7B63555C14A13F97C4B4AF661BEE7F7F44F41BB",
+        "command": "pcm-stream",
+        "inputMode": "incremental-pcm",
+        "requestOptions": {},
+        "pcmProgress": {
+          "SubmittedSamples": 400000,
+          "SubmittedChunks": 196,
+          "EndOfInputSignaled": true
+        },
+        "expectedSamples": 400000,
+        "pcmChunkBytes": 4096,
+        "remainingQueuedChunks": 0,
+        "bufferedReplay": true,
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 1.4997902,
+        "inferenceSeconds": 13.9962934,
+        "realTimeFactor": 0.559851736,
+        "peakWorkingSetBytes": 1048997888,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "response": {
+        "text": " En esa época GPT4 y Cloud son ed de antropy. Pero lo interesante es que con una fracción del costo, según los números que ellos compartieron, gastaron entre 5 a 6 millones de dólares para entrenar el modelo y por otro lado la competencia, por ejemplo, OpenA y gastó más de 100 millones en entrenar a GPT4. La diferencia es brutal, es comparar el presupuesto, no sé, es como comparar el presupuesto de una película indi",
+        "language": null,
+        "durationMs": null,
+        "finishReason": "Stop",
+        "segmentCount": 152,
+        "segmentsWithStartAndEnd": 0,
+        "segmentsWithAnyTimingField": 0,
+        "segmentsWithWords": 0,
+        "segmentsWithLanguage": 0,
+        "representativeSegments": [
+          {
+            "text": " En",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " es",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " indi",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          }
+        ],
+        "languageMarkerCount": 0
+      },
+      "streamedOutput": {
+        "chunkCount": 152,
+        "firstChunk": {
+          "text": " En",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        "lastChunk": {
+          "text": " indi",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      }
+    },
+    {
+      "name": "nemotron35-voice",
+      "preparation": {
+        "sourceFile": "Recording.m4a",
+        "sourceSha256": "8799BA4D6C18F918BA59C97380563BA34DBA0AACA59E2C8258D52858FEF2CF04",
+        "decodedSha256": "1F3CB4F1B8FE4F0A83A9575FA7B63555C14A13F97C4B4AF661BEE7F7F44F41BB",
+        "sourceOffsetSeconds": 60.0,
+        "requestedDurationSeconds": 25.0,
+        "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "modelId": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+        "language": "es",
+        "streaming": false,
+        "pcmStreaming": true,
+        "inputMode": "incremental-pcm",
+        "pcmChunkBytes": 4096,
+        "createdUtc": "2026-10-22T16:51:07.7627244-04:00",
+        "complete": true,
+        "backendExitCode": 2
+      },
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 60,
+        "decodedDurationSeconds": 25,
+        "inputSha256": "1F3CB4F1B8FE4F0A83A9575FA7B63555C14A13F97C4B4AF661BEE7F7F44F41BB",
+        "command": "pcm-stream",
+        "inputMode": "incremental-pcm",
+        "requestOptions": {
+          "language": "es"
+        },
+        "pcmProgress": {
+          "SubmittedSamples": 400000,
+          "SubmittedChunks": 196,
+          "EndOfInputSignaled": true
+        },
+        "expectedSamples": 400000,
+        "pcmChunkBytes": 4096,
+        "bufferedReplay": true,
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": false,
+        "initializationSeconds": 4.8955281,
+        "inferenceSeconds": 4.961634,
+        "realTimeFactor": 0.19846536,
+        "peakWorkingSetBytes": 1105575936,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "response": {
+        "text": " En esa época GPT4 y Claus de Antropy. <es-US> Pero lo interesante es que con una fracción del costo. <es-US> Según los números que ellos compartieron, gastaron entre cinco a seis millones de dólares para entrenar el modelo y, por otro lado, la competencia, por ejemplo, OpenAI gastó más de cien millones en entrenar a GPT cuatro. <es-US> La diferencia es brutal, no es comparar al presupuesto, no sé, es como comparar el presupuesto de una película indie con",
+        "language": null,
+        "durationMs": null,
+        "finishReason": "Stop",
+        "segmentCount": 211,
+        "segmentsWithStartAndEnd": 0,
+        "segmentsWithAnyTimingField": 0,
+        "segmentsWithWords": 0,
+        "segmentsWithLanguage": 0,
+        "representativeSegments": [
+          {
+            "text": " En",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " es",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " con",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          }
+        ],
+        "languageMarkerCount": 3
+      },
+      "streamedOutput": {
+        "chunkCount": 211,
+        "firstChunk": {
+          "text": " En",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        "lastChunk": {
+          "text": " con",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      }
+    },
+    {
+      "name": "nemotron-es-edited-final",
+      "preparation": {
+        "sourceFile": "ntn459.mp3",
+        "sourceSha256": "9F14A9764E45BCFC8363D59C95230412E559CC90C58AED5E3CAECD9014C58DB7",
+        "decodedSha256": "8F539A8A0B9D1C42657CFEB4505B90791017FFDA1ECE03DEF7E70081A6C852EF",
+        "sourceOffsetSeconds": 0.0,
+        "requestedDurationSeconds": 25.0,
+        "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "modelId": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "language": "es",
+        "streaming": false,
+        "pcmStreaming": true,
+        "inputMode": "incremental-pcm",
+        "pcmChunkBytes": 4096,
+        "createdUtc": "2026-10-22T16:56:36.2684147-04:00",
+        "complete": true,
+        "backendExitCode": 2
+      },
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 0,
+        "decodedDurationSeconds": 25,
+        "inputSha256": "8F539A8A0B9D1C42657CFEB4505B90791017FFDA1ECE03DEF7E70081A6C852EF",
+        "command": "pcm-stream",
+        "inputMode": "incremental-pcm",
+        "requestOptions": {},
+        "pcmProgress": {
+          "SubmittedSamples": 400000,
+          "SubmittedChunks": 196,
+          "EndOfInputSignaled": true
+        },
+        "expectedSamples": 400000,
+        "pcmChunkBytes": 4096,
+        "remainingQueuedChunks": 0,
+        "bufferedReplay": true,
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 1.528199,
+        "inferenceSeconds": 14.3746315,
+        "realTimeFactor": 0.5749852599999999,
+        "peakWorkingSetBytes": 1042726912,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "response": {
+        "text": " Buenas, buenas, bienvenidos a otro episodio de No tiene nombre Feliz año nuevo, estamos en el 2026 y hey, si pensabas que ibas a empezar el año de una forma tranquilita, repasando, festejando el 31 de",
+        "language": null,
+        "durationMs": null,
+        "finishReason": "Stop",
+        "segmentCount": 76,
+        "segmentsWithStartAndEnd": 0,
+        "segmentsWithAnyTimingField": 0,
+        "segmentsWithWords": 0,
+        "segmentsWithLanguage": 0,
+        "representativeSegments": [
+          {
+            "text": " Bu",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": "enas",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " de",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          }
+        ],
+        "languageMarkerCount": 0
+      },
+      "streamedOutput": {
+        "chunkCount": 76,
+        "firstChunk": {
+          "text": " Bu",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        "lastChunk": {
+          "text": " de",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      }
+    },
+    {
+      "name": "nemotron35-edited",
+      "preparation": {
+        "sourceFile": "ntn459.mp3",
+        "sourceSha256": "9F14A9764E45BCFC8363D59C95230412E559CC90C58AED5E3CAECD9014C58DB7",
+        "decodedSha256": "8F539A8A0B9D1C42657CFEB4505B90791017FFDA1ECE03DEF7E70081A6C852EF",
+        "sourceOffsetSeconds": 0.0,
+        "requestedDurationSeconds": 25.0,
+        "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "modelId": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+        "language": "es",
+        "streaming": false,
+        "pcmStreaming": true,
+        "inputMode": "incremental-pcm",
+        "pcmChunkBytes": 4096,
+        "createdUtc": "2026-10-22T16:53:30.8889306-04:00",
+        "complete": true,
+        "backendExitCode": 2
+      },
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 0,
+        "decodedDurationSeconds": 25,
+        "inputSha256": "8F539A8A0B9D1C42657CFEB4505B90791017FFDA1ECE03DEF7E70081A6C852EF",
+        "command": "pcm-stream",
+        "inputMode": "incremental-pcm",
+        "requestOptions": {
+          "language": "es"
+        },
+        "pcmProgress": {
+          "SubmittedSamples": 400000,
+          "SubmittedChunks": 196,
+          "EndOfInputSignaled": true
+        },
+        "expectedSamples": 400000,
+        "pcmChunkBytes": 4096,
+        "remainingQueuedChunks": 0,
+        "bufferedReplay": true,
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 1.6547242,
+        "inferenceSeconds": 4.5823533,
+        "realTimeFactor": 0.183294132,
+        "peakWorkingSetBytes": 1075175424,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "response": {
+        "text": " Buenas, buenas, bienvenidos a otro episodio de No tiene nombre feliz Año Nuevo, estamos en el veinte veintiséis y hey, si pensabas que ibas a enpezar el año de una forma tranquilita, repasando, festejándo el treinta y uno de",
+        "language": null,
+        "durationMs": null,
+        "finishReason": "Stop",
+        "segmentCount": 116,
+        "segmentsWithStartAndEnd": 0,
+        "segmentsWithAnyTimingField": 0,
+        "segmentsWithWords": 0,
+        "segmentsWithLanguage": 0,
+        "representativeSegments": [
+          {
+            "text": " Bu",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": "en",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " de",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          }
+        ],
+        "languageMarkerCount": 0
+      },
+      "streamedOutput": {
+        "chunkCount": 116,
+        "firstChunk": {
+          "text": " Bu",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        "lastChunk": {
+          "text": " de",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      }
+    },
+    {
+      "name": "nemotron-es-continuity",
+      "preparation": {
+        "sourceFile": "Recording.m4a",
+        "sourceSha256": "8799BA4D6C18F918BA59C97380563BA34DBA0AACA59E2C8258D52858FEF2CF04",
+        "decodedSha256": "16393E8BBEAE1F06F25364CD717A9A8823F2F6C7416A834D28EB60368AEA433E",
+        "sourceOffsetSeconds": 60.0,
+        "requestedDurationSeconds": 75.0,
+        "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "modelId": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "language": "es",
+        "streaming": false,
+        "pcmStreaming": true,
+        "inputMode": "incremental-pcm",
+        "pcmChunkBytes": 4096,
+        "createdUtc": "2026-10-22T16:53:41.1826961-04:00",
+        "complete": true,
+        "backendExitCode": 2
+      },
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 60,
+        "decodedDurationSeconds": 75.000125,
+        "inputSha256": "16393E8BBEAE1F06F25364CD717A9A8823F2F6C7416A834D28EB60368AEA433E",
+        "command": "pcm-stream",
+        "inputMode": "incremental-pcm",
+        "requestOptions": {},
+        "pcmProgress": {
+          "SubmittedSamples": 1200002,
+          "SubmittedChunks": 586,
+          "EndOfInputSignaled": true
+        },
+        "expectedSamples": 1200002,
+        "pcmChunkBytes": 4096,
+        "remainingQueuedChunks": 0,
+        "bufferedReplay": true,
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 1.6407191,
+        "inferenceSeconds": 42.0816963,
+        "realTimeFactor": 0.5610883488527519,
+        "peakWorkingSetBytes": 1050787840,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "response": {
+        "text": " En esa época GPT4 y Cloud son ed de antropy. Pero lo interesante es que con una fracción del costo, según los números que ellos compartieron, gastaron entre 5 a 6 millones de dólares para entrenar el modelo y por otro lado la competencia, por ejemplo, OpenA y gastó más de 100 millones en entrenar a GPT4. La diferencia es brutal, es comparar el presupuesto, no sé, es como comparar el presupuesto de una película indi con el de Avengers, pero la película indie es buenísima, es buenísima y hace que compita con los de Marvel. Aquí la clave estuvo en la eficiencia algorítmica. ¿Por qué? Deepx usó chips H800 de Nvidia, que son una versión mucho, mucho menos potente, pero después del ban que le puso a Estados Unidos a China es el que China puede importar hoy. Entonces, como tiene restricciones, ese es el único la única GPU que pudieron importar para empezar a trabajar. Y en lugar de quejarse, la cultura de nuestros amigos dijo, bueno, a ver, si no tenemos los mejores chips, hagamos mejores algoritmos y pum, funcionó. El modelo del que estábamos hablando, el R1 en ese momento usaba razonamiento, similar al O1 de esa época de OpenA y demostró en esos días que se podía ser inteligencia artificial",
+        "language": null,
+        "durationMs": null,
+        "finishReason": "Stop",
+        "segmentCount": 430,
+        "segmentsWithStartAndEnd": 0,
+        "segmentsWithAnyTimingField": 0,
+        "segmentsWithWords": 0,
+        "segmentsWithLanguage": 0,
+        "representativeSegments": [
+          {
+            "text": " En",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " es",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": "al",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          }
+        ],
+        "languageMarkerCount": 0
+      },
+      "streamedOutput": {
+        "chunkCount": 430,
+        "firstChunk": {
+          "text": " En",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        "lastChunk": {
+          "text": "al",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      }
+    },
+    {
+      "name": "nemotron35-continuity",
+      "preparation": {
+        "sourceFile": "Recording.m4a",
+        "sourceSha256": "8799BA4D6C18F918BA59C97380563BA34DBA0AACA59E2C8258D52858FEF2CF04",
+        "decodedSha256": "16393E8BBEAE1F06F25364CD717A9A8823F2F6C7416A834D28EB60368AEA433E",
+        "sourceOffsetSeconds": 60.0,
+        "requestedDurationSeconds": 75.0,
+        "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "modelId": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+        "language": "es",
+        "streaming": false,
+        "pcmStreaming": true,
+        "inputMode": "incremental-pcm",
+        "pcmChunkBytes": 4096,
+        "createdUtc": "2026-10-22T16:54:28.6379369-04:00",
+        "complete": true,
+        "backendExitCode": 2
+      },
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 60,
+        "decodedDurationSeconds": 75.000125,
+        "inputSha256": "16393E8BBEAE1F06F25364CD717A9A8823F2F6C7416A834D28EB60368AEA433E",
+        "command": "pcm-stream",
+        "inputMode": "incremental-pcm",
+        "requestOptions": {
+          "language": "es"
+        },
+        "pcmProgress": {
+          "SubmittedSamples": 1200002,
+          "SubmittedChunks": 586,
+          "EndOfInputSignaled": true
+        },
+        "expectedSamples": 1200002,
+        "pcmChunkBytes": 4096,
+        "remainingQueuedChunks": 0,
+        "bufferedReplay": true,
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 1.6313671,
+        "inferenceSeconds": 13.7989839,
+        "realTimeFactor": 0.1839861453564244,
+        "peakWorkingSetBytes": 1088954368,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "response": {
+        "text": " En esa época GPT4 y Claus de Antropy. <es-US> Pero lo interesante es que con una fracción del costo. <es-US> Según los números que ellos compartieron, gastaron entre cinco a seis millones de dólares para entrenar el modelo y, por otro lado, la competencia, por ejemplo, OpenAI gastó más de cien millones en entrenar a GPT cuatro. <es-US> La diferencia es brutal, no es comparar al presupuesto, no sé, es como comparar el presupuesto de una película indie con el de Avengers, pero la película indie es buenísima, es buenísima y hace que compita con los de Marvel. <es-US> Aquí la clave estuvo en la eficiencia algorítmica porque DeepSix usó chips a ochocientos de envidia que son una versión mucho, mucho menos potente pero después del ban que le puso a Estados Unidos a China es el que China puede importar hoy. <es-US> Entonces, como tiene restricciones, ese es el único GPU que pudieron importar para empezar a trabajar y en lugar de quejarse, la cultura de nuestros amigos dijo, bueno, a ver, si no tenemos los mejores chips, hagamos mejores algoritmos y funciona. <es-US> El modelo que del que estábamos hablando el R1 en ese momento usaba razonamiento similar al O1 de esa época de OpenI y de monstruo en esos días que se podía ser inteligencia artificial",
+        "language": null,
+        "durationMs": null,
+        "finishReason": "Stop",
+        "segmentCount": 576,
+        "segmentsWithStartAndEnd": 0,
+        "segmentsWithAnyTimingField": 0,
+        "segmentsWithWords": 0,
+        "segmentsWithLanguage": 0,
+        "representativeSegments": [
+          {
+            "text": " En",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " es",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": "l",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          }
+        ],
+        "languageMarkerCount": 6
+      },
+      "streamedOutput": {
+        "chunkCount": 576,
+        "firstChunk": {
+          "text": " En",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        "lastChunk": {
+          "text": "l",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      }
+    },
+    {
+      "name": "nemotron-es-closing",
+      "preparation": {
+        "sourceFile": "Recording.m4a",
+        "sourceSha256": "8799BA4D6C18F918BA59C97380563BA34DBA0AACA59E2C8258D52858FEF2CF04",
+        "decodedSha256": "7F3EA758737D93A445F41558889A377C3994F7CABA52D10C346D6528EE047370",
+        "sourceOffsetSeconds": 1380.0,
+        "requestedDurationSeconds": 60.0,
+        "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "modelId": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "language": "es",
+        "streaming": false,
+        "pcmStreaming": true,
+        "inputMode": "incremental-pcm",
+        "pcmChunkBytes": 4096,
+        "createdUtc": "2026-10-22T16:54:58.1861347-04:00",
+        "complete": true,
+        "backendExitCode": 2
+      },
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 1380,
+        "decodedDurationSeconds": 28.9148125,
+        "inputSha256": "7F3EA758737D93A445F41558889A377C3994F7CABA52D10C346D6528EE047370",
+        "command": "pcm-stream",
+        "inputMode": "incremental-pcm",
+        "requestOptions": {},
+        "pcmProgress": {
+          "SubmittedSamples": 462637,
+          "SubmittedChunks": 226,
+          "EndOfInputSignaled": true
+        },
+        "expectedSamples": 462637,
+        "pcmChunkBytes": 4096,
+        "remainingQueuedChunks": 0,
+        "bufferedReplay": true,
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 1.6490183,
+        "inferenceSeconds": 16.2236893,
+        "realTimeFactor": 0.5610857514638907,
+        "peakWorkingSetBytes": 1047318528,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "response": {
+        "text": " pero prometo que van a quedar episodios de minutos a partir del que sigue seguramente la última predicción será que para mediados al 2026 tendremos el R2 seguramente va a ser otro momento wow y cosas por el estilo y si es gratis y funciona bien el local mucha gente va a estar muy muy muy contenta así que bueno más info no tiene nombre voy a ponerme como proje que el bot inteligente ahí nos vemos en la próxima hasta luego y de nuevo feliz año nuevo",
+        "language": null,
+        "durationMs": null,
+        "finishReason": "Stop",
+        "segmentCount": 144,
+        "segmentsWithStartAndEnd": 0,
+        "segmentsWithAnyTimingField": 0,
+        "segmentsWithWords": 0,
+        "segmentsWithLanguage": 0,
+        "representativeSegments": [
+          {
+            "text": " pero",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " prom",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": "vo",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          }
+        ],
+        "languageMarkerCount": 0
+      },
+      "streamedOutput": {
+        "chunkCount": 144,
+        "firstChunk": {
+          "text": " pero",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        "lastChunk": {
+          "text": "vo",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      }
+    },
+    {
+      "name": "nemotron35-closing",
+      "preparation": {
+        "sourceFile": "Recording.m4a",
+        "sourceSha256": "8799BA4D6C18F918BA59C97380563BA34DBA0AACA59E2C8258D52858FEF2CF04",
+        "decodedSha256": "7F3EA758737D93A445F41558889A377C3994F7CABA52D10C346D6528EE047370",
+        "sourceOffsetSeconds": 1380.0,
+        "requestedDurationSeconds": 60.0,
+        "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "modelId": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+        "language": "es",
+        "streaming": false,
+        "pcmStreaming": true,
+        "inputMode": "incremental-pcm",
+        "pcmChunkBytes": 4096,
+        "createdUtc": "2026-10-22T16:55:21.3268752-04:00",
+        "complete": true,
+        "backendExitCode": 2
+      },
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 1380,
+        "decodedDurationSeconds": 28.9148125,
+        "inputSha256": "7F3EA758737D93A445F41558889A377C3994F7CABA52D10C346D6528EE047370",
+        "command": "pcm-stream",
+        "inputMode": "incremental-pcm",
+        "requestOptions": {
+          "language": "es"
+        },
+        "pcmProgress": {
+          "SubmittedSamples": 462637,
+          "SubmittedChunks": 226,
+          "EndOfInputSignaled": true
+        },
+        "expectedSamples": 462637,
+        "pcmChunkBytes": 4096,
+        "remainingQueuedChunks": 0,
+        "bufferedReplay": true,
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 1.7993433,
+        "inferenceSeconds": 5.5347028,
+        "realTimeFactor": 0.19141409960725148,
+        "peakWorkingSetBytes": 1089925120,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "response": {
+        "text": " Pero prometo que van a quedar episodio diez minutos a partir del que sigue. <es-US> Seguramente la última predicación será que para mediados al veinte veintiséis tendremos el R2 seguramente va a ser otro momento wow y cosas para el estilo easy de gratis y funciona bien en el local mucha gente va a estar muy, muy, muy contenta. <es-US> Así que bueno, más info, el no tiene nombre punto com podía ponerme como ped projet del bot inteligente ahí, no os vemos en la próxima hasta luego y de nuevo feliz año nuevo",
+        "language": null,
+        "durationMs": null,
+        "finishReason": "Stop",
+        "segmentCount": 237,
+        "segmentsWithStartAndEnd": 0,
+        "segmentsWithAnyTimingField": 0,
+        "segmentsWithWords": 0,
+        "segmentsWithLanguage": 0,
+        "representativeSegments": [
+          {
+            "text": " Pero",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " pro",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": "vo",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          }
+        ],
+        "languageMarkerCount": 2
+      },
+      "streamedOutput": {
+        "chunkCount": 237,
+        "firstChunk": {
+          "text": " Pero",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        "lastChunk": {
+          "text": "vo",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      }
+    }
+  ],
+  "initialLanguageSettingProbes": [
+    {
+      "name": "nemotron-es-voice",
+      "preparation": {
+        "sourceFile": "Recording.m4a",
+        "sourceSha256": "8799BA4D6C18F918BA59C97380563BA34DBA0AACA59E2C8258D52858FEF2CF04",
+        "decodedSha256": "1F3CB4F1B8FE4F0A83A9575FA7B63555C14A13F97C4B4AF661BEE7F7F44F41BB",
+        "sourceOffsetSeconds": 60.0,
+        "requestedDurationSeconds": 25.0,
+        "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "modelId": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "language": "es",
+        "streaming": false,
+        "pcmStreaming": true,
+        "inputMode": "incremental-pcm",
+        "pcmChunkBytes": 4096,
+        "createdUtc": "2026-10-22T16:50:30.9050014-04:00",
+        "complete": true,
+        "backendExitCode": 2
+      },
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 60,
+        "decodedDurationSeconds": 25,
+        "inputSha256": "1F3CB4F1B8FE4F0A83A9575FA7B63555C14A13F97C4B4AF661BEE7F7F44F41BB",
+        "command": "pcm-stream",
+        "inputMode": "incremental-pcm",
+        "requestOptions": {
+          "language": "es"
+        },
+        "pcmProgress": {
+          "SubmittedSamples": 400000,
+          "SubmittedChunks": 196,
+          "EndOfInputSignaled": true
+        },
+        "expectedSamples": 400000,
+        "pcmChunkBytes": 4096,
+        "bufferedReplay": true,
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": false,
+        "initializationSeconds": 6.8970372,
+        "inferenceSeconds": 14.0607868,
+        "realTimeFactor": 0.562431472,
+        "peakWorkingSetBytes": 1069191168,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "response": {
+        "text": " En esa época GPT4 y Cloud son ed de antropy. Pero lo interesante es que con una fracción del costo, según los números que ellos compartieron, gastaron entre 5 a 6 millones de dólares para entrenar el modelo y por otro lado la competencia, por ejemplo, OpenA y gastó más de 100 millones en entrenar a GPT4. La diferencia es brutal, es comparar el presupuesto, no sé, es como comparar el presupuesto de una película indi",
+        "language": null,
+        "durationMs": null,
+        "finishReason": "Stop",
+        "segmentCount": 152,
+        "segmentsWithStartAndEnd": 0,
+        "segmentsWithAnyTimingField": 0,
+        "segmentsWithWords": 0,
+        "segmentsWithLanguage": 0,
+        "representativeSegments": [
+          {
+            "text": " En",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " es",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " indi",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          }
+        ],
+        "languageMarkerCount": 0
+      },
+      "streamedOutput": {
+        "chunkCount": 152,
+        "firstChunk": {
+          "text": " En",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        "lastChunk": {
+          "text": " indi",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      }
+    },
+    {
+      "name": "nemotron-es-edited",
+      "preparation": {
+        "sourceFile": "ntn459.mp3",
+        "sourceSha256": "9F14A9764E45BCFC8363D59C95230412E559CC90C58AED5E3CAECD9014C58DB7",
+        "decodedSha256": "8F539A8A0B9D1C42657CFEB4505B90791017FFDA1ECE03DEF7E70081A6C852EF",
+        "sourceOffsetSeconds": 0.0,
+        "requestedDurationSeconds": 25.0,
+        "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+        "modelId": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "language": "es",
+        "streaming": false,
+        "pcmStreaming": true,
+        "inputMode": "incremental-pcm",
+        "pcmChunkBytes": 4096,
+        "createdUtc": "2026-10-22T16:51:21.3809905-04:00",
+        "complete": true,
+        "backendExitCode": 2
+      },
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 0,
+        "decodedDurationSeconds": 25,
+        "inputSha256": "8F539A8A0B9D1C42657CFEB4505B90791017FFDA1ECE03DEF7E70081A6C852EF",
+        "command": "pcm-stream",
+        "inputMode": "incremental-pcm",
+        "requestOptions": {
+          "language": "es"
+        },
+        "pcmProgress": {
+          "SubmittedSamples": 400000,
+          "SubmittedChunks": 196,
+          "EndOfInputSignaled": true
+        },
+        "expectedSamples": 400000,
+        "pcmChunkBytes": 4096,
+        "bufferedReplay": true,
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 1.5386347,
+        "inferenceSeconds": 13.9678076,
+        "realTimeFactor": 0.558712304,
+        "peakWorkingSetBytes": 1044779008,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "response": {
+        "text": " Buenas, buenas, bienvenidos a otro episodio de No tiene nombre Feliz año nuevo, estamos en el 2026 y hey, si pensabas que ibas a empezar el año de una forma tranquilita, repasando, festejando el 31 de",
+        "language": null,
+        "durationMs": null,
+        "finishReason": "Stop",
+        "segmentCount": 76,
+        "segmentsWithStartAndEnd": 0,
+        "segmentsWithAnyTimingField": 0,
+        "segmentsWithWords": 0,
+        "segmentsWithLanguage": 0,
+        "representativeSegments": [
+          {
+            "text": " Bu",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": "enas",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          },
+          {
+            "text": " de",
+            "start": null,
+            "end": null,
+            "StartTimeMs": null,
+            "EndTimeMs": null,
+            "kind": "None",
+            "Language": null,
+            "UtteranceStart": false,
+            "Words": []
+          }
+        ],
+        "languageMarkerCount": 0
+      },
+      "streamedOutput": {
+        "chunkCount": 76,
+        "firstChunk": {
+          "text": " Bu",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        "lastChunk": {
+          "text": " de",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      }
+    }
+  ],
+  "initialLanguageSettingWarning": "Cannot set lang_id: encoder graph has no lang_id input (this model is not a prompt-conditioned multilingual model).",
+  "alignmentImplemented": false,
+  "fullEpisodeCoverageVerified": false,
+  "accuracyScored": false,
+  "offlineStartupVerified": false,
+  "otherLanguagesTested": false,
+  "codeSwitchingTested": false
+}

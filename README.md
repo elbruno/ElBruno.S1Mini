@@ -225,6 +225,7 @@ dotnet test ElBruno.S1Mini.slnx --framework net8.0
 
 | Sample | Description |
 |--------|-------------|
+| [FoundryLocalSpeech](src/samples/FoundryLocalSpeech/README.md) | Windows-only, opt-in Foundry Local speech feasibility probe. Captures model/API evidence and raw responses; blocks subtitle output when acoustic timestamps are unavailable. |
 | [HelloS1Mini](src/samples/HelloS1Mini) | Console sample covering default normalization, `Context.Email`, `Structure.Lists`, and pure-filler input. |
 | [S1MiniWebSample](src/samples/S1MiniWebSample) | Blazor Server web UI: textarea → Normalize → cleaned output with styling/structure/context selectors. |
 | [LiveMicTranscription](src/samples/LiveMicTranscription) | Windows-only console sample: default microphone → [Silero VAD](https://www.nuget.org/packages/ElBruno.Realtime.SileroVad) speech detection → [ElBruno.Whisper](https://www.nuget.org/packages/ElBruno.Whisper) speech-to-text → s1-mini cleanup, live and fully local. A [Spectre.Console](https://spectreconsole.net/) UI provides arrow-key model/style pickers, per-model download progress bars, a live input meter, and side-by-side raw vs. cleaned transcript panels, then offers to delete every downloaded model on exit. Supports `--save-audio` and `--wav <file\|folder>` for reproducible testing. |

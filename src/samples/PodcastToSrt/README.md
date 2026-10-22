@@ -139,5 +139,8 @@ observations and limits. A completed inference run does not mean its transcripti
 correct: automatic-language failure, music hallucinations and coarse timing need separate review.
 
 For cross-machine continuation, see the [handoff note](../../../docs/multilingual-handoff.md).
+The separate [Foundry Local evaluation](../FoundryLocalSpeech/README.md) probes an
+alternative speech backend without changing this sample. Its initial timestamp and
+multilingual Parakeet gates are blocked; it is not a replacement subtitle pipeline.
 The [saved baseline](baseline/README.md) preserves the existing results without requiring
 new inference.

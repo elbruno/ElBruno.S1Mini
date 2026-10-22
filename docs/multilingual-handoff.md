@@ -52,9 +52,40 @@ Baseline artifacts are saved in Git; new evaluations write to ignored
 `artifacts\multilingual`. Do not edit original audio or treat model hypotheses as reference
 transcripts.
 
-## Next session: plan first
+## Foundry Local follow-up
 
-The user's next requested step is a plan, not immediate implementation:
+The requested plan was approved for implementation on 2026-10-22. The isolated
+[FoundryLocalSpeech evaluation](../src/samples/FoundryLocalSpeech/README.md) now
+captures SDK/catalog evidence and raw transcription responses, validates decoded WAV
+duration and gates subtitle serialization on actual segment timestamps.
+See its [results](../src/samples/FoundryLocalSpeech/evaluation-results.md) for the
+measured blockers. The blog and existing Whisper pipeline remain unchanged.
+
+The initial gates failed: the catalog offers English-only Parakeet v2, not multilingual
+v3, and the tested Foundry Whisper Base paths returned no acoustic timing. Full-episode
+Foundry runs, human-scored accuracy, cleanup/runtime coexistence and offline inference
+verification remain unperformed. No model conversion or cross-repository change
+was attempted.
+
+A subsequent approved follow-up added real incremental PCM input rather than
+assuming streamed output from a file request is equivalent. **Spanish Nemotron
+and Nemotron 3.5 both transcribed Spanish successfully** on voice 60-85 seconds,
+edited 0-25 seconds, a 75-second voice passage and voice from 1380 seconds to EOF.
+Both submitted all decoded samples and finalized normally, but neither returned
+acoustic segment timestamps. Nemotron 3.5 also emits literal `<es-US>` markers in
+some raw transcripts. No accuracy ranking or other-language claim is established.
+
+Use `-PcmStreaming` in the Foundry runner for these models. Spanish-only Nemotron
+omits unsupported language conditioning; Nemotron 3.5 sends explicit Spanish.
+The [Nemotron snapshot](../src/samples/FoundryLocalSpeech/baseline/2026-10-22-nemotron.json)
+preserves exact variants, settings, fixture hashes, raw text and timing/queue
+evidence. The initial snapshot is unchanged. The remaining subtitle blocker is
+real acoustic alignment, not an inability to transcribe Spanish. A separate
+aligner was not implemented; the blog's first step remains unchanged.
+
+## Original comparison scope
+
+The earlier handoff recorded the intended comparison scope:
 
 > Plan comparisons of my ElBruno .NET speech libraries, including Parakeet and other
 > available backends, for Spanish and multilingual podcast subtitles. Discover the

@@ -1,0 +1,985 @@
+{
+  "schemaVersion": 1,
+  "evaluationDate": "2026-10-22",
+  "verdict": "blocked: no catalog multilingual Parakeet v3; tested Whisper paths have no acoustic timestamps; Parakeet v2 file inference failed",
+  "scope": "short-file feasibility only; not an accuracy, full-coverage, offline or cleanup/coexistence benchmark",
+  "cpu": "AMD EPYC 74F3 24-Core Processor",
+  "sourceRevision": "1f0d8ffd3d54443e12230da051e0c63e75645356",
+  "api": {
+    "sdkPackage": "Microsoft.AI.Foundry.Local",
+    "sdkPackageVersion": "2.2.1",
+    "sdkAssemblyVersion": "2.2.1.0",
+    "audioMethods": [
+      "Microsoft.AI.Foundry.Local.Session SetOptions(Microsoft.AI.Foundry.Local.RequestOptions)",
+      "Microsoft.AI.Foundry.Local.Session SetStreaming(Boolean)",
+      "System.Threading.Tasks.Task`1[Microsoft.AI.Foundry.Local.Response] ProcessRequestAsync(Microsoft.AI.Foundry.Local.Request, System.Threading.CancellationToken)",
+      "Microsoft.AI.Foundry.Local.StreamingResponse ProcessStreamingRequestAsync(Microsoft.AI.Foundry.Local.Request, System.Threading.CancellationToken)",
+      "Void Dispose()"
+    ],
+    "responseProperties": [
+      "Text",
+      "Language",
+      "DurationMs",
+      "Segments",
+      "ItemType"
+    ],
+    "segmentProperties": [
+      "Kind",
+      "Text",
+      "StartTimeMs",
+      "EndTimeMs",
+      "UtteranceStart",
+      "Words",
+      "Language",
+      "ItemType"
+    ],
+    "framework": ".NET 8.0.32",
+    "os": "Microsoft Windows 10.0.26300",
+    "architecture": "X64",
+    "processorCount": 36
+  },
+  "cli": {
+    "variants": [
+      {
+        "alias": "nemotron-3.5-asr-streaming-0.6b",
+        "variantName": "nemotron-3.5-asr-streaming-0.6b-generic-cpu",
+        "variantId": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+        "type": "Speech",
+        "device": "Cpu",
+        "executionProvider": "CPUExecutionProvider",
+        "fileSizeMb": 756,
+        "cached": false,
+        "license": "MIT"
+      },
+      {
+        "alias": "nemotron-speech-streaming-en-0.6b",
+        "variantName": "nemotron-speech-streaming-en-0.6b-generic-cpu",
+        "variantId": "nemotron-speech-streaming-en-0.6b-generic-cpu:3",
+        "type": "Speech",
+        "device": "Cpu",
+        "executionProvider": "CPUExecutionProvider",
+        "fileSizeMb": 696,
+        "cached": false,
+        "license": "MIT"
+      },
+      {
+        "alias": "nemotron-speech-streaming-es-0.6b",
+        "variantName": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu",
+        "variantId": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+        "type": "Speech",
+        "device": "Cpu",
+        "executionProvider": "CPUExecutionProvider",
+        "fileSizeMb": 729,
+        "cached": false,
+        "license": "MIT"
+      },
+      {
+        "alias": "parakeet-tdt-0.6b-v2",
+        "variantName": "parakeet-tdt-0.6b-v2-generic-cpu",
+        "variantId": "parakeet-tdt-0.6b-v2-generic-cpu:1",
+        "type": "Speech",
+        "device": "Cpu",
+        "executionProvider": "CPUExecutionProvider",
+        "fileSizeMb": 692,
+        "cached": false,
+        "license": "MIT"
+      },
+      {
+        "alias": "whisper-base",
+        "variantName": "openai-whisper-base-generic-cpu",
+        "variantId": "openai-whisper-base-generic-cpu:3",
+        "type": "Speech",
+        "device": "Cpu",
+        "executionProvider": "CPUExecutionProvider",
+        "fileSizeMb": 205,
+        "cached": false,
+        "license": "apache-2.0"
+      },
+      {
+        "alias": "whisper-large-v3-turbo",
+        "variantName": "openai-whisper-large-v3-turbo-generic-cpu",
+        "variantId": "openai-whisper-large-v3-turbo-generic-cpu:4",
+        "type": "Speech",
+        "device": "Cpu",
+        "executionProvider": "CPUExecutionProvider",
+        "fileSizeMb": 1284,
+        "cached": false,
+        "license": "apache-2.0"
+      },
+      {
+        "alias": "whisper-medium",
+        "variantName": "openai-whisper-medium-generic-cpu",
+        "variantId": "openai-whisper-medium-generic-cpu:4",
+        "type": "Speech",
+        "device": "Cpu",
+        "executionProvider": "CPUExecutionProvider",
+        "fileSizeMb": 937,
+        "cached": false,
+        "license": "apache-2.0"
+      },
+      {
+        "alias": "whisper-small",
+        "variantName": "openai-whisper-small-generic-cpu",
+        "variantId": "openai-whisper-small-generic-cpu:4",
+        "type": "Speech",
+        "device": "Cpu",
+        "executionProvider": "CPUExecutionProvider",
+        "fileSizeMb": 438,
+        "cached": false,
+        "license": "apache-2.0"
+      },
+      {
+        "alias": "whisper-tiny",
+        "variantName": "openai-whisper-tiny-generic-cpu",
+        "variantId": "openai-whisper-tiny-generic-cpu:4",
+        "type": "Speech",
+        "device": "Cpu",
+        "executionProvider": "CPUExecutionProvider",
+        "fileSizeMb": 131,
+        "cached": false,
+        "license": "apache-2.0"
+      }
+    ]
+  },
+  "sdkSpeechCatalog": [
+    {
+      "Alias": "nemotron-3.5-asr-streaming-0.6b",
+      "variants": [
+        {
+          "id": "nemotron-3.5-asr-streaming-0.6b-generic-cpu:3",
+          "name": "nemotron-3.5-asr-streaming-0.6b-generic-cpu",
+          "version": 3,
+          "alias": "nemotron-3.5-asr-streaming-0.6b",
+          "displayName": "nemotron-3.5-asr-streaming-0.6b-generic-cpu",
+          "providerType": "FoundryLocal",
+          "uri": "azureml://registries/azureml/models/nemotron-3.5-asr-streaming-0.6b-generic-cpu/versions/3",
+          "modelType": "ONNX",
+          "promptTemplate": null,
+          "publisher": "Microsoft",
+          "modelSettings": null,
+          "license": "MIT",
+          "licenseDescription": "This model is provided under the License Terms available at <https://github.com/microsoft/Foundry-Local/blob/main/licenses/nemotron-speech-streaming.md>.",
+          "cached": false,
+          "task": "automatic-speech-recognition",
+          "runtime": {
+            "deviceType": "CPU",
+            "executionProvider": "CPUExecutionProvider"
+          },
+          "fileSizeMb": 756,
+          "supportsToolCalling": null,
+          "maxOutputTokens": 2048,
+          "minFLVersion": "1.2.1",
+          "createdAt": 1780680475,
+          "contextLength": null,
+          "inputModalities": "audio",
+          "outputModalities": "text",
+          "capabilities": null
+        }
+      ]
+    },
+    {
+      "Alias": "nemotron-speech-streaming-en-0.6b",
+      "variants": [
+        {
+          "id": "nemotron-speech-streaming-en-0.6b-generic-cpu:3",
+          "name": "nemotron-speech-streaming-en-0.6b-generic-cpu",
+          "version": 3,
+          "alias": "nemotron-speech-streaming-en-0.6b",
+          "displayName": "nemotron-speech-streaming-en-0.6b-generic-cpu",
+          "providerType": "FoundryLocal",
+          "uri": "azureml://registries/azureml/models/nemotron-speech-streaming-en-0.6b-generic-cpu/versions/3",
+          "modelType": "ONNX",
+          "promptTemplate": null,
+          "publisher": "Microsoft",
+          "modelSettings": null,
+          "license": "MIT",
+          "licenseDescription": "This model is provided under the License Terms available at <https://github.com/microsoft/Foundry-Local/blob/main/licenses/nemotron-speech-streaming.md>.",
+          "cached": false,
+          "task": "automatic-speech-recognition",
+          "runtime": {
+            "deviceType": "CPU",
+            "executionProvider": "CPUExecutionProvider"
+          },
+          "fileSizeMb": 696,
+          "supportsToolCalling": null,
+          "maxOutputTokens": 2048,
+          "minFLVersion": "1.1.0",
+          "createdAt": 1777946131,
+          "contextLength": null,
+          "inputModalities": "audio",
+          "outputModalities": "text",
+          "capabilities": null
+        }
+      ]
+    },
+    {
+      "Alias": "nemotron-speech-streaming-es-0.6b",
+      "variants": [
+        {
+          "id": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu:1",
+          "name": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu",
+          "version": 1,
+          "alias": "nemotron-speech-streaming-es-0.6b",
+          "displayName": "nemotron-speech-streaming-es-0.6b-ft-generic-cpu",
+          "providerType": "FoundryLocal",
+          "uri": "azureml://registries/azureml/models/nemotron-speech-streaming-es-0.6b-ft-generic-cpu/versions/1",
+          "modelType": "ONNX",
+          "promptTemplate": null,
+          "publisher": "Microsoft",
+          "modelSettings": null,
+          "license": "MIT",
+          "licenseDescription": "This model is provided under the License Terms available at <https://github.com/microsoft/Foundry-Local/blob/main/licenses/nemotron-speech-streaming.md>.",
+          "cached": false,
+          "task": "automatic-speech-recognition",
+          "runtime": {
+            "deviceType": "CPU",
+            "executionProvider": "CPUExecutionProvider"
+          },
+          "fileSizeMb": 729,
+          "supportsToolCalling": null,
+          "maxOutputTokens": 2048,
+          "minFLVersion": "1.1.0",
+          "createdAt": 1778527282,
+          "contextLength": null,
+          "inputModalities": "audio",
+          "outputModalities": "text",
+          "capabilities": null
+        }
+      ]
+    },
+    {
+      "Alias": "parakeet-tdt-0.6b-v2",
+      "variants": [
+        {
+          "id": "parakeet-tdt-0.6b-v2-generic-cpu:1",
+          "name": "parakeet-tdt-0.6b-v2-generic-cpu",
+          "version": 1,
+          "alias": "parakeet-tdt-0.6b-v2",
+          "displayName": "parakeet-tdt-0.6b-v2-generic-cpu",
+          "providerType": "FoundryLocal",
+          "uri": "azureml://registries/azureml/models/parakeet-tdt-0.6b-v2-generic-cpu/versions/1",
+          "modelType": "ONNX",
+          "promptTemplate": null,
+          "publisher": "Microsoft",
+          "modelSettings": null,
+          "license": "MIT",
+          "licenseDescription": "This model is provided under the License Terms available at <https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2#licenseterms-of-use>.",
+          "cached": false,
+          "task": "automatic-speech-recognition",
+          "runtime": {
+            "deviceType": "CPU",
+            "executionProvider": "CPUExecutionProvider"
+          },
+          "fileSizeMb": 692,
+          "supportsToolCalling": null,
+          "maxOutputTokens": 2048,
+          "minFLVersion": "1.2.0",
+          "createdAt": 1781294675,
+          "contextLength": null,
+          "inputModalities": "audio",
+          "outputModalities": "text",
+          "capabilities": null
+        }
+      ]
+    },
+    {
+      "Alias": "whisper-base",
+      "variants": [
+        {
+          "id": "openai-whisper-base-generic-cpu:3",
+          "name": "openai-whisper-base-generic-cpu",
+          "version": 3,
+          "alias": "whisper-base",
+          "displayName": "openai-whisper-base-generic-cpu",
+          "providerType": "FoundryLocal",
+          "uri": "azureml://registries/azureml/models/openai-whisper-base-generic-cpu/versions/3",
+          "modelType": "ONNX",
+          "promptTemplate": null,
+          "publisher": "Microsoft",
+          "modelSettings": null,
+          "license": "apache-2.0",
+          "licenseDescription": "This model is provided under the License Terms available at https://www.apache.org/licenses/LICENSE-2.0.html.",
+          "cached": true,
+          "task": "automatic-speech-recognition",
+          "runtime": {
+            "deviceType": "CPU",
+            "executionProvider": "CPUExecutionProvider"
+          },
+          "fileSizeMb": 205,
+          "supportsToolCalling": null,
+          "maxOutputTokens": 2048,
+          "minFLVersion": "0.0.0",
+          "createdAt": 1778536535,
+          "contextLength": null,
+          "inputModalities": "audio",
+          "outputModalities": "text",
+          "capabilities": null
+        }
+      ]
+    },
+    {
+      "Alias": "whisper-large-v3-turbo",
+      "variants": [
+        {
+          "id": "openai-whisper-large-v3-turbo-generic-cpu:4",
+          "name": "openai-whisper-large-v3-turbo-generic-cpu",
+          "version": 4,
+          "alias": "whisper-large-v3-turbo",
+          "displayName": "openai-whisper-large-v3-turbo-generic-cpu",
+          "providerType": "FoundryLocal",
+          "uri": "azureml://registries/azureml/models/openai-whisper-large-v3-turbo-generic-cpu/versions/4",
+          "modelType": "ONNX",
+          "promptTemplate": null,
+          "publisher": "Microsoft",
+          "modelSettings": null,
+          "license": "apache-2.0",
+          "licenseDescription": "This model is provided under the License Terms available at https://www.apache.org/licenses/LICENSE-2.0.html.",
+          "cached": false,
+          "task": "automatic-speech-recognition",
+          "runtime": {
+            "deviceType": "CPU",
+            "executionProvider": "CPUExecutionProvider"
+          },
+          "fileSizeMb": 1284,
+          "supportsToolCalling": null,
+          "maxOutputTokens": 2048,
+          "minFLVersion": "0.0.0",
+          "createdAt": 1779291962,
+          "contextLength": null,
+          "inputModalities": "audio",
+          "outputModalities": "text",
+          "capabilities": null
+        }
+      ]
+    },
+    {
+      "Alias": "whisper-medium",
+      "variants": [
+        {
+          "id": "openai-whisper-medium-generic-cpu:4",
+          "name": "openai-whisper-medium-generic-cpu",
+          "version": 4,
+          "alias": "whisper-medium",
+          "displayName": "openai-whisper-medium-generic-cpu",
+          "providerType": "FoundryLocal",
+          "uri": "azureml://registries/azureml/models/openai-whisper-medium-generic-cpu/versions/4",
+          "modelType": "ONNX",
+          "promptTemplate": null,
+          "publisher": "Microsoft",
+          "modelSettings": null,
+          "license": "apache-2.0",
+          "licenseDescription": "This model is provided under the License Terms available at https://www.apache.org/licenses/LICENSE-2.0.html.",
+          "cached": false,
+          "task": "automatic-speech-recognition",
+          "runtime": {
+            "deviceType": "CPU",
+            "executionProvider": "CPUExecutionProvider"
+          },
+          "fileSizeMb": 937,
+          "supportsToolCalling": null,
+          "maxOutputTokens": 2048,
+          "minFLVersion": "0.0.0",
+          "createdAt": 1779291976,
+          "contextLength": null,
+          "inputModalities": "audio",
+          "outputModalities": "text",
+          "capabilities": null
+        }
+      ]
+    },
+    {
+      "Alias": "whisper-small",
+      "variants": [
+        {
+          "id": "openai-whisper-small-generic-cpu:4",
+          "name": "openai-whisper-small-generic-cpu",
+          "version": 4,
+          "alias": "whisper-small",
+          "displayName": "openai-whisper-small-generic-cpu",
+          "providerType": "FoundryLocal",
+          "uri": "azureml://registries/azureml/models/openai-whisper-small-generic-cpu/versions/4",
+          "modelType": "ONNX",
+          "promptTemplate": null,
+          "publisher": "Microsoft",
+          "modelSettings": null,
+          "license": "apache-2.0",
+          "licenseDescription": "This model is provided under the License Terms available at https://www.apache.org/licenses/LICENSE-2.0.html.",
+          "cached": false,
+          "task": "automatic-speech-recognition",
+          "runtime": {
+            "deviceType": "CPU",
+            "executionProvider": "CPUExecutionProvider"
+          },
+          "fileSizeMb": 438,
+          "supportsToolCalling": null,
+          "maxOutputTokens": 2048,
+          "minFLVersion": "0.0.0",
+          "createdAt": 1779291987,
+          "contextLength": null,
+          "inputModalities": "audio",
+          "outputModalities": "text",
+          "capabilities": null
+        }
+      ]
+    },
+    {
+      "Alias": "whisper-tiny",
+      "variants": [
+        {
+          "id": "openai-whisper-tiny-generic-cpu:4",
+          "name": "openai-whisper-tiny-generic-cpu",
+          "version": 4,
+          "alias": "whisper-tiny",
+          "displayName": "openai-whisper-tiny-generic-cpu",
+          "providerType": "FoundryLocal",
+          "uri": "azureml://registries/azureml/models/openai-whisper-tiny-generic-cpu/versions/4",
+          "modelType": "ONNX",
+          "promptTemplate": null,
+          "publisher": "Microsoft",
+          "modelSettings": null,
+          "license": "apache-2.0",
+          "licenseDescription": "This model is provided under the License Terms available at https://www.apache.org/licenses/LICENSE-2.0.html.",
+          "cached": false,
+          "task": "automatic-speech-recognition",
+          "runtime": {
+            "deviceType": "CPU",
+            "executionProvider": "CPUExecutionProvider"
+          },
+          "fileSizeMb": 131,
+          "supportsToolCalling": null,
+          "maxOutputTokens": 2048,
+          "minFLVersion": "0.0.0",
+          "createdAt": 1778536594,
+          "contextLength": null,
+          "inputModalities": "audio",
+          "outputModalities": "text",
+          "capabilities": null
+        }
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "sourceFile": "Recording.m4a",
+      "sourceSha256": "8799BA4D6C18F918BA59C97380563BA34DBA0AACA59E2C8258D52858FEF2CF04",
+      "decodedSha256": "1F3CB4F1B8FE4F0A83A9575FA7B63555C14A13F97C4B4AF661BEE7F7F44F41BB",
+      "sourceOffsetSeconds": 60.0,
+      "requestedDurationSeconds": 25.0,
+      "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    {
+      "sourceFile": "ntn459.mp3",
+      "sourceSha256": "9F14A9764E45BCFC8363D59C95230412E559CC90C58AED5E3CAECD9014C58DB7",
+      "decodedSha256": "8F539A8A0B9D1C42657CFEB4505B90791017FFDA1ECE03DEF7E70081A6C852EF",
+      "sourceOffsetSeconds": 0.0,
+      "requestedDurationSeconds": 25.0,
+      "ffmpegVersion": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers"
+    }
+  ],
+  "runs": [
+    {
+      "name": "voice-base-es",
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "openai-whisper-base-generic-cpu:3",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 60,
+        "decodedDurationSeconds": 25,
+        "inputSha256": "1F3CB4F1B8FE4F0A83A9575FA7B63555C14A13F97C4B4AF661BEE7F7F44F41BB",
+        "command": "transcribe",
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 0.9881764,
+        "inferenceSeconds": 0.6268912,
+        "realTimeFactor": 0.025075648,
+        "peakWorkingSetBytes": 471261184,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "model": {
+        "id": "openai-whisper-base-generic-cpu:3",
+        "name": "openai-whisper-base-generic-cpu",
+        "version": 3,
+        "alias": "whisper-base",
+        "displayName": "openai-whisper-base-generic-cpu",
+        "providerType": "FoundryLocal",
+        "uri": "azureml://registries/azureml/models/openai-whisper-base-generic-cpu/versions/3",
+        "modelType": "ONNX",
+        "promptTemplate": null,
+        "publisher": "Microsoft",
+        "modelSettings": null,
+        "license": "apache-2.0",
+        "licenseDescription": "This model is provided under the License Terms available at https://www.apache.org/licenses/LICENSE-2.0.html.",
+        "cached": true,
+        "task": "automatic-speech-recognition",
+        "runtime": {
+          "deviceType": "CPU",
+          "executionProvider": "CPUExecutionProvider"
+        },
+        "fileSizeMb": 205,
+        "supportsToolCalling": null,
+        "maxOutputTokens": 2048,
+        "minFLVersion": "0.0.0",
+        "createdAt": 1778536535,
+        "contextLength": null,
+        "inputModalities": "audio",
+        "outputModalities": "text",
+        "capabilities": null
+      },
+      "transcript": " con gn esa época gpt4 y cloudzone de antropi. Pero lo interesante es que con una fracción del costo. Según los números que yo os compartieron, gastaron entre 5 a 6 millones de dólares para entrenar el modelo y por otro lado la competencia, por ejemplo, openen a ir gastó más de 100 millones en entrenar a gpt4. La diferencia es brutal, ¿no? Es comparar el presupuesto, no sé, es como comparar el presupuesto de una película indico,",
+      "responseLanguage": null,
+      "responseDurationMs": null,
+      "segmentCount": 113,
+      "timedSegmentCount": 0,
+      "firstSegments": [
+        {
+          "text": " con",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": " g",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": "n",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": " esa",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": " época",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      ]
+    },
+    {
+      "name": "voice-base-es-stream",
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "openai-whisper-base-generic-cpu:3",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 60,
+        "decodedDurationSeconds": 25,
+        "inputSha256": "1F3CB4F1B8FE4F0A83A9575FA7B63555C14A13F97C4B4AF661BEE7F7F44F41BB",
+        "command": "stream",
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 0.9828355,
+        "inferenceSeconds": 1.5447968,
+        "realTimeFactor": 0.061791872000000005,
+        "peakWorkingSetBytes": 471834624,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "model": {
+        "id": "openai-whisper-base-generic-cpu:3",
+        "name": "openai-whisper-base-generic-cpu",
+        "version": 3,
+        "alias": "whisper-base",
+        "displayName": "openai-whisper-base-generic-cpu",
+        "providerType": "FoundryLocal",
+        "uri": "azureml://registries/azureml/models/openai-whisper-base-generic-cpu/versions/3",
+        "modelType": "ONNX",
+        "promptTemplate": null,
+        "publisher": "Microsoft",
+        "modelSettings": null,
+        "license": "apache-2.0",
+        "licenseDescription": "This model is provided under the License Terms available at https://www.apache.org/licenses/LICENSE-2.0.html.",
+        "cached": true,
+        "task": "automatic-speech-recognition",
+        "runtime": {
+          "deviceType": "CPU",
+          "executionProvider": "CPUExecutionProvider"
+        },
+        "fileSizeMb": 205,
+        "supportsToolCalling": null,
+        "maxOutputTokens": 2048,
+        "minFLVersion": "0.0.0",
+        "createdAt": 1778536535,
+        "contextLength": null,
+        "inputModalities": "audio",
+        "outputModalities": "text",
+        "capabilities": null
+      },
+      "transcript": " con gn esa época gpt4 y cloudzone de antropi. Pero lo interesante es que con una fracción del costo. Según los números que yo os compartieron, gastaron entre 5 a 6 millones de dólares para entrenar el modelo y por otro lado la competencia, por ejemplo, openen a ir gastó más de 100 millones en entrenar a gpt4. La diferencia es brutal, ¿no? Es comparar el presupuesto, no sé, es como comparar el presupuesto de una película indico,",
+      "responseLanguage": null,
+      "responseDurationMs": null,
+      "segmentCount": 113,
+      "timedSegmentCount": 0,
+      "firstSegments": [
+        {
+          "text": " con",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": " g",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": "n",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": " esa",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": " época",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      ]
+    },
+    {
+      "name": "edited-base-es",
+      "report": {
+        "complete": true,
+        "scope": "one supplied audio file, not verified full-episode coverage",
+        "model": "openai-whisper-base-generic-cpu:3",
+        "requestedLanguage": "es",
+        "detectedLanguageVerified": false,
+        "sourceOffsetSeconds": 0,
+        "decodedDurationSeconds": 25,
+        "inputSha256": "8F539A8A0B9D1C42657CFEB4505B90791017FFDA1ECE03DEF7E70081A6C852EF",
+        "command": "transcribe",
+        "finishReason": "Stop",
+        "sdkPackage": "Microsoft.AI.Foundry.Local",
+        "sdkPackageVersion": "2.2.1",
+        "wasCached": true,
+        "initializationSeconds": 1.0857283,
+        "inferenceSeconds": 0.4674683,
+        "realTimeFactor": 0.018698732,
+        "peakWorkingSetBytes": 466374656,
+        "timing": {
+          "Status": "missing-timestamps",
+          "Reason": "The SDK returned segments without acoustic start/end values.",
+          "Spans": [],
+          "CanWriteSubtitles": false
+        },
+        "cleanupApplied": false,
+        "accuracyScored": false,
+        "acousticAlignmentVerified": false
+      },
+      "model": {
+        "id": "openai-whisper-base-generic-cpu:3",
+        "name": "openai-whisper-base-generic-cpu",
+        "version": 3,
+        "alias": "whisper-base",
+        "displayName": "openai-whisper-base-generic-cpu",
+        "providerType": "FoundryLocal",
+        "uri": "azureml://registries/azureml/models/openai-whisper-base-generic-cpu/versions/3",
+        "modelType": "ONNX",
+        "promptTemplate": null,
+        "publisher": "Microsoft",
+        "modelSettings": null,
+        "license": "apache-2.0",
+        "licenseDescription": "This model is provided under the License Terms available at https://www.apache.org/licenses/LICENSE-2.0.html.",
+        "cached": true,
+        "task": "automatic-speech-recognition",
+        "runtime": {
+          "deviceType": "CPU",
+          "executionProvider": "CPUExecutionProvider"
+        },
+        "fileSizeMb": 205,
+        "supportsToolCalling": null,
+        "maxOutputTokens": 2048,
+        "minFLVersion": "0.0.0",
+        "createdAt": 1778536535,
+        "contextLength": null,
+        "inputModalities": "audio",
+        "outputModalities": "text",
+        "capabilities": null
+      },
+      "transcript": " Buenas, buenas, bienvenidos a otro episodio de No Tiene nombre feliz año nuevo estamos en el 2026 y si pensaba que iba a empezar a caño de una forma tranquilita repasando, festejando el 31 de diciembre",
+      "responseLanguage": null,
+      "responseDurationMs": null,
+      "segmentCount": 52,
+      "timedSegmentCount": 0,
+      "firstSegments": [
+        {
+          "text": " Bu",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": "enas",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": ",",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": " buenas",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        },
+        {
+          "text": ",",
+          "start": null,
+          "end": null,
+          "StartTimeMs": null,
+          "EndTimeMs": null,
+          "kind": "None",
+          "Language": null,
+          "UtteranceStart": false,
+          "Words": []
+        }
+      ]
+    }
+  ],
+  "tutorialSdkProbe": {
+    "api": {
+      "sdkPackage": "Microsoft.AI.Foundry.Local.WinML",
+      "sdkPackageVersion": "1.2.4",
+      "sdkAssemblyVersion": "1.0.0.0",
+      "audioMethods": [
+        "AudioSettings get_Settings()",
+        "System.Threading.Tasks.Task`1[Betalgo.Ranul.OpenAI.ObjectModels.ResponseModels.AudioCreateTranscriptionResponse] TranscribeAudioAsync(System.String, System.Nullable`1[System.Threading.CancellationToken])",
+        "System.Collections.Generic.IAsyncEnumerable`1[Betalgo.Ranul.OpenAI.ObjectModels.ResponseModels.AudioCreateTranscriptionResponse] TranscribeAudioStreamingAsync(System.String, System.Threading.CancellationToken)",
+        "Microsoft.AI.Foundry.Local.OpenAI.LiveAudioTranscriptionSession CreateLiveTranscriptionSession()"
+      ],
+      "audioSettings": [
+        "Language",
+        "Temperature"
+      ],
+      "responseProperties": [
+        "Text",
+        "Task",
+        "Language",
+        "Duration",
+        "Words",
+        "Segments",
+        "StreamEvent",
+        "IsDelta",
+        "Successful",
+        "Error",
+        "HttpStatusCode",
+        "HeaderValues",
+        "ObjectTypeName"
+      ],
+      "framework": ".NET 8.0.32",
+      "os": "Microsoft Windows 10.0.26300",
+      "architecture": "X64",
+      "processorCount": 36
+    },
+    "oneShotReport": {
+      "complete": true,
+      "scope": "one supplied audio file, not verified full-episode coverage",
+      "model": "openai-whisper-base-generic-cpu:3",
+      "requestedLanguage": "es",
+      "detectedLanguageVerified": false,
+      "sourceOffsetSeconds": 60,
+      "decodedDurationSeconds": 25,
+      "inputSha256": "1F3CB4F1B8FE4F0A83A9575FA7B63555C14A13F97C4B4AF661BEE7F7F44F41BB",
+      "command": "transcribe",
+      "wasCached": false,
+      "initializationSeconds": 1.8067634,
+      "inferenceSeconds": 0.7299787,
+      "realTimeFactor": 0.029199147999999998,
+      "peakWorkingSetBytes": 521887744,
+      "timing": {
+        "Status": "missing-timestamps",
+        "Reason": "The response did not supply segment timestamps. No timing was invented.",
+        "Spans": [],
+        "CanWriteSubtitles": false
+      },
+      "cleanupApplied": false,
+      "accuracyScored": false,
+      "acousticAlignmentVerified": false
+    },
+    "oneShotResponse": {
+      "text": " con gn esa época gpt4 y cloudzone de antropi. Pero lo interesante es que con una fracción del costo. Según los números que yo os compartieron, gastaron entre 5 a 6 millones de dólares para entrenar el modelo y por otro lado la competencia, por ejemplo, openen a ir gastó más de 100 millones en entrenar a gpt4. La diferencia es brutal, ¿no? Es comparar el presupuesto, no sé, es como comparar el presupuesto de una película indico,",
+      "task": null,
+      "language": null,
+      "duration": 0,
+      "words": null,
+      "segments": null,
+      "StreamEvent": null,
+      "IsDelta": false,
+      "Successful": true,
+      "error": null,
+      "HttpStatusCode": 0,
+      "HeaderValues": null,
+      "object": null
+    },
+    "streamedChunkCount": 113,
+    "firstStreamedChunk": {
+      "text": " con",
+      "task": null,
+      "language": null,
+      "duration": 0,
+      "words": null,
+      "segments": null,
+      "StreamEvent": null,
+      "IsDelta": false,
+      "Successful": true,
+      "error": null,
+      "HttpStatusCode": 0,
+      "HeaderValues": null,
+      "object": null
+    },
+    "allChunksLackSegmentsAndWords": true
+  },
+  "parakeetEnglishProbe": {
+    "synthetic": true,
+    "synthesis": "Windows SAPI.SpVoice, default installed voice; decoded to PCM16 mono 16kHz with FFmpeg",
+    "script": "So um welcome back to the the show. Today we are talking about local transcription in dot net. We will meet on Thursday no wait Friday at ten thirty.",
+    "originalSha256": "FF0F20DCB45B5263706543FABE14D00E03398A3F6AC181054BE9906A1167BF36",
+    "decodedSha256": "5EA899D9EE75B1259173CFB03AC04A85614286BC9E6711527272CFA3B8F45D92",
+    "model": {
+      "id": "parakeet-tdt-0.6b-v2-generic-cpu:1",
+      "name": "parakeet-tdt-0.6b-v2-generic-cpu",
+      "version": 1,
+      "alias": "parakeet-tdt-0.6b-v2",
+      "displayName": "parakeet-tdt-0.6b-v2-generic-cpu",
+      "providerType": "FoundryLocal",
+      "uri": "azureml://registries/azureml/models/parakeet-tdt-0.6b-v2-generic-cpu/versions/1",
+      "modelType": "ONNX",
+      "promptTemplate": null,
+      "publisher": "Microsoft",
+      "modelSettings": null,
+      "license": "MIT",
+      "licenseDescription": "This model is provided under the License Terms available at <https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2#licenseterms-of-use>.",
+      "cached": false,
+      "task": "automatic-speech-recognition",
+      "runtime": {
+        "deviceType": "CPU",
+        "executionProvider": "CPUExecutionProvider"
+      },
+      "fileSizeMb": 692,
+      "supportsToolCalling": null,
+      "maxOutputTokens": 2048,
+      "minFLVersion": "1.2.0",
+      "createdAt": 1781294675,
+      "contextLength": null,
+      "inputModalities": "audio",
+      "outputModalities": "text",
+      "capabilities": null
+    },
+    "failure": {
+      "complete": false,
+      "errorType": "FoundryLocalException",
+      "error": "onnx_audio_generator.cc:140 fl::OnnxAudioGenerator::Create model does not support audio processing"
+    }
+  }
+}
